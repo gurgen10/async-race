@@ -1,3 +1,3 @@
-const { VITE_API_BASE_URL: BASE_URL } = import.meta.env;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
 export { BASE_URL };

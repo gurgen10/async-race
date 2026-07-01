@@ -548,7 +548,7 @@ function GarageStatusBody({ status, cars, onEdit }: GarageStatusBodyProps) {
   if (status === 'failed') {
     return (
       <Typography sx={{ mt: 2, color: '#f87171' }}>
-        Failed to load cars — is the API server running on port 3000?
+        Failed to load cars — Make sure the API server is running and reachable at the configured URL.
       </Typography>
     );
   }
