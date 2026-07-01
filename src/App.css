@@ -1,0 +1,363 @@
+.app-shell {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.brand-frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 32px;
+  border: 2px solid #22d3ee;
+  border-radius: 16px;
+  position: relative;
+  box-shadow:
+    0 0 10px #22d3ee,
+    0 0 28px #22d3ee55,
+    inset 0 0 12px #22d3ee18;
+}
+
+.brand-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.brand-word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-letter {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f0abfc;
+  transition: transform 0.2s ease;
+  margin: 0 0.04em;
+  animation: letter-pulse 1.4s ease-in-out infinite;
+}
+
+.brand-lights {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.2em;
+}
+
+.brand-light {
+  width: 0.28em;
+  height: 0.28em;
+  border-radius: 999px;
+  opacity: 0;
+  box-shadow: 0 0 6px currentColor;
+  animation: blink-light 1.2s infinite;
+}
+
+.brand-light-red {
+  background: #ff3b30;
+  color: #ff3b30;
+  animation-delay: 0s;
+}
+
+.brand-light-blue {
+  background: #2196f3;
+  color: #2196f3;
+  animation-delay: 0.2s;
+}
+
+.brand-light-orange {
+  background: #ff9800;
+  color: #ff9800;
+  animation-delay: 0.4s;
+}
+
+.brand-text {
+  display: inline-block;
+  line-height: 1;
+  text-shadow: 0 0 0 transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-button {
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 10px 28px;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.nav-button[data-nav='garage'] {
+  color: #22d3ee;
+  border-color: #22d3ee;
+  text-shadow: 0 0 8px #22d3ee;
+  box-shadow: 0 0 6px #22d3ee88;
+}
+
+.nav-button[data-nav='garage']:hover,
+.nav-button[data-nav='garage'].active {
+  background: #22d3ee18;
+  box-shadow:
+    0 0 12px #22d3ee,
+    0 0 28px #22d3ee66;
+}
+
+.nav-button[data-nav='winners'] {
+  color: #f472b6;
+  border-color: #f472b6;
+  text-shadow: 0 0 8px #f472b6;
+  box-shadow: 0 0 6px #f472b688;
+}
+
+.nav-button[data-nav='winners']:hover,
+.nav-button[data-nav='winners'].active {
+  background: #f472b618;
+  box-shadow:
+    0 0 12px #f472b6,
+    0 0 28px #f472b666;
+}
+
+.page-card {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+  text-align: left;
+  color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-card .MuiTypography-root {
+  color: inherit;
+}
+
+.page-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 59, 48, 0.14),
+    transparent 25%,
+    transparent 75%,
+    rgba(33, 150, 243, 0.14)
+  );
+  pointer-events: none;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-kicker {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.74rem;
+  color: #f97316;
+}
+
+.page-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  font-size: 0.85rem;
+}
+
+.page-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.page-actions button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #ff3b30 0%, #f97316 100%);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+}
+
+.page-actions .action-secondary {
+  background: linear-gradient(90deg, #2196f3 0%, #2563eb 100%);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.list {
+  padding-left: 0;
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+
+.list .list-item {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.list .list-item .MuiTypography-root {
+  color: #f8fafc;
+}
+
+/* ── Loading screen ── */
+@keyframes loading-screen-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Each flag strip oscillates vertically; staggered delays create the wave */
+@keyframes flag-strip-wave {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  30% {
+    transform: translateY(-9px);
+  }
+
+  70% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes loading-text-blink {
+  0%,
+  100% {
+    opacity: 1;
+    color: #f8fafc;
+  }
+
+  50% {
+    opacity: 0.3;
+    color: #f97316;
+  }
+}
+
+/* Check-engine indicator — slow amber blink when an engine breaks */
+@keyframes check-engine-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Finish-line golden pulse when a car crosses the line */
+@keyframes finish-glow {
+  0%,
+  100% {
+    filter: brightness(1.2);
+    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.35);
+  }
+
+  50% {
+    filter: brightness(1.85);
+    box-shadow: inset 0 0 24px rgba(255, 215, 0, 0.82);
+  }
+}
+
+@keyframes blink-light {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes letter-pulse {
+  0%,
+  100% {
+    color: #f0abfc;
+    text-shadow: 0 0 6px #f0abfc88;
+    transform: scale(1);
+  }
+
+  50% {
+    color: #e879f9;
+    text-shadow:
+      0 0 12px #e879f9,
+      0 0 28px #e879f966;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brand-frame {
+    align-self: center;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-button {
+    flex: 1;
+  }
+}

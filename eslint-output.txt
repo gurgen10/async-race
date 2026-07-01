@@ -1,0 +1,1600 @@
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\App.tsx
+    1:44  error  Missing semicolon                                                                                                   semi
+    2:8   error  Expected a line break after this opening brace                                                                      object-curly-newline
+    2:60  error  Expected a line break before this closing brace                                                                     object-curly-newline
+    2:85  error  Missing semicolon                                                                                                   semi
+    9:23  error  Missing semicolon                                                                                                   semi
+   10:19  error  Missing semicolon                                                                                                   semi
+   11:51  error  Missing semicolon                                                                                                   semi
+   12:59  error  Missing semicolon                                                                                                   semi
+   14:1   error  Function 'App' has too many lines (129). Maximum allowed is 40                                                      max-lines-per-function
+   15:33  error  Missing semicolon                                                                                                   semi
+   16:33  error  Missing semicolon                                                                                                   semi
+   17:27  error  Missing semicolon                                                                                                   semi
+   19:51  error  Missing semicolon                                                                                                   semi
+   21:32  error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+   21:53  error  No magic number: 2000                                                                                               @typescript-eslint/no-magic-numbers
+   21:58  error  Missing semicolon                                                                                                   semi
+   22:18  error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+   22:33  error  Missing semicolon                                                                                                   semi
+   23:9   error  Missing semicolon                                                                                                   semi
+  117:63  error  '||' should be placed at the beginning of the line                                                                  operator-linebreak
+  118:70  error  Missing semicolon                                                                                                   semi
+  124:27  error  Promise-returning function provided to attribute where a void return was expected                                   @typescript-eslint/no-misused-promises
+  129:16  error  Missing semicolon                                                                                                   semi
+  137:30  error  Expected parentheses around arrow function argument                                                                 arrow-parens
+  144:4   error  Missing semicolon                                                                                                   semi
+  147:19  error  Missing semicolon                                                                                                   semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\api\baseApi.ts
+  1:48  error  Missing semicolon                                     semi
+  4:1   error  Expected indentation of 2 spaces but found 4          indent
+  4:64  error  Missing semicolon                                     semi
+  5:1   error  Expected indentation of 2 spaces but found 4          indent
+  6:1   error  Expected indentation of 4 spaces but found 8          indent
+  6:33  error  Invalid type "number" of template literal expression  @typescript-eslint/restrict-template-expressions
+  6:60  error  Missing semicolon                                     semi
+  7:1   error  Expected indentation of 2 spaces but found 4          indent
+  8:1   error  Expected indentation of 2 spaces but found 4          indent
+  8:41  error  Missing semicolon                                     semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\api\engineApi.ts
+   1:37  error  Missing semicolon                                     semi
+   2:67  error  Missing semicolon                                     semi
+   4:23  error  Missing semicolon                                     semi
+   7:1   error  Expected indentation of 2 spaces but found 4          indent
+   8:1   error  Expected indentation of 4 spaces but found 8          indent
+   8:63  error  Invalid type "number" of template literal expression  @typescript-eslint/restrict-template-expressions
+   9:1   error  Expected indentation of 6 spaces but found 12         indent
+  10:1   error  Expected indentation of 4 spaces but found 8          indent
+  10:11  error  Missing semicolon                                     semi
+  11:1   error  Expected indentation of 4 spaces but found 8          indent
+  11:51  error  Invalid type "number" of template literal expression  @typescript-eslint/restrict-template-expressions
+  11:87  error  Missing semicolon                                     semi
+  12:1   error  Expected indentation of 4 spaces but found 8          indent
+  12:58  error  Missing semicolon                                     semi
+  13:1   error  Expected indentation of 2 spaces but found 4          indent
+  15:1   error  Expected indentation of 2 spaces but found 4          indent
+  16:1   error  Expected indentation of 4 spaces but found 8          indent
+  16:63  error  Invalid type "number" of template literal expression  @typescript-eslint/restrict-template-expressions
+  17:1   error  Expected indentation of 6 spaces but found 12         indent
+  18:1   error  Expected indentation of 4 spaces but found 8          indent
+  18:11  error  Missing semicolon                                     semi
+  19:1   error  Expected indentation of 4 spaces but found 8          indent
+  19:33  error  No magic number: 500                                  @typescript-eslint/no-magic-numbers
+  19:53  error  Missing semicolon                                     semi
+  20:1   error  Expected indentation of 4 spaces but found 8          indent
+  20:51  error  Invalid type "number" of template literal expression  @typescript-eslint/restrict-template-expressions
+  20:83  error  Missing semicolon                                     semi
+  21:1   error  Expected indentation of 4 spaces but found 8          indent
+  21:25  error  Missing semicolon                                     semi
+  22:1   error  Expected indentation of 2 spaces but found 4          indent
+  23:2   error  Missing semicolon                                     semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\api\garageApi.ts
+   1:47  error  Missing semicolon                                             semi
+   2:51  error  Missing semicolon                                             semi
+   4:23  error  Missing semicolon                                             semi
+  17:1   error  Expected indentation of 2 spaces but found 4                  indent
+  18:1   error  Expected indentation of 4 spaces but found 8                  indent
+  18:44  error  Missing semicolon                                             semi
+  19:1   error  Expected indentation of 4 spaces but found 8                  indent
+  19:79  error  Missing semicolon                                             semi
+  20:1   error  Expected indentation of 4 spaces but found 8                  indent
+  20:82  error  Missing semicolon                                             semi
+  22:1   error  Expected indentation of 4 spaces but found 8                  indent
+  22:68  error  Missing semicolon                                             semi
+  23:1   error  Expected indentation of 4 spaces but found 8                  indent
+  23:51  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  23:78  error  Missing semicolon                                             semi
+  25:1   error  Expected indentation of 4 spaces but found 8                  indent
+  25:73  error  Missing semicolon                                             semi
+  26:1   error  Expected indentation of 4 spaces but found 8                  indent
+  26:54  error  Missing semicolon                                             semi
+  27:1   error  Expected indentation of 4 spaces but found 8                  indent
+  27:31  error  Missing semicolon                                             semi
+  28:1   error  Expected indentation of 2 spaces but found 4                  indent
+  30:1   error  Expected indentation of 2 spaces but found 4                  indent
+  31:1   error  Expected indentation of 4 spaces but found 8                  indent
+  31:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  31:34  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  33:1   error  Expected indentation of 2 spaces but found 4                  indent
+  34:1   error  Expected indentation of 4 spaces but found 8                  indent
+  34:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  35:1   error  Expected indentation of 6 spaces but found 12                 indent
+  36:1   error  Expected indentation of 6 spaces but found 12                 indent
+  37:1   error  Expected indentation of 6 spaces but found 12                 indent
+  38:1   error  Expected indentation of 4 spaces but found 8                  indent
+  40:1   error  Expected indentation of 2 spaces but found 4                  indent
+  41:1   error  Expected indentation of 4 spaces but found 8                  indent
+  41:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  41:34  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  42:1   error  Expected indentation of 6 spaces but found 12                 indent
+  43:1   error  Expected indentation of 6 spaces but found 12                 indent
+  44:1   error  Expected indentation of 6 spaces but found 12                 indent
+  45:1   error  Expected indentation of 4 spaces but found 8                  indent
+  47:1   error  Expected indentation of 2 spaces but found 4                  indent
+  48:1   error  Expected indentation of 4 spaces but found 8                  indent
+  48:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  48:18  error  void is only valid as a return type or generic type argument  @typescript-eslint/no-invalid-void-type
+  48:35  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  49:2   error  Missing semicolon                                             semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\api\winnersApi.ts
+   1:47  error  Missing semicolon                                             semi
+   2:60  error  Missing semicolon                                             semi
+   4:24  error  Missing semicolon                                             semi
+  22:1   error  Expected indentation of 2 spaces but found 4                  indent
+  23:1   error  Expected indentation of 4 spaces but found 8                  indent
+  23:44  error  Missing semicolon                                             semi
+  24:1   error  Expected indentation of 4 spaces but found 8                  indent
+  24:79  error  Missing semicolon                                             semi
+  25:1   error  Expected indentation of 4 spaces but found 8                  indent
+  25:82  error  Missing semicolon                                             semi
+  26:1   error  Expected indentation of 4 spaces but found 8                  indent
+  26:57  error  Missing semicolon                                             semi
+  27:1   error  Expected indentation of 4 spaces but found 8                  indent
+  27:60  error  Missing semicolon                                             semi
+  29:1   error  Expected indentation of 4 spaces but found 8                  indent
+  29:68  error  Missing semicolon                                             semi
+  30:1   error  Expected indentation of 4 spaces but found 8                  indent
+  30:51  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  30:78  error  Missing semicolon                                             semi
+  32:1   error  Expected indentation of 4 spaces but found 8                  indent
+  32:73  error  Missing semicolon                                             semi
+  33:1   error  Expected indentation of 4 spaces but found 8                  indent
+  33:60  error  Missing semicolon                                             semi
+  34:1   error  Expected indentation of 4 spaces but found 8                  indent
+  34:34  error  Missing semicolon                                             semi
+  35:1   error  Expected indentation of 2 spaces but found 4                  indent
+  37:1   error  Expected indentation of 2 spaces but found 4                  indent
+  38:1   error  Expected indentation of 4 spaces but found 8                  indent
+  38:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  38:37  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  40:1   error  Expected indentation of 2 spaces but found 4                  indent
+  41:1   error  Expected indentation of 4 spaces but found 8                  indent
+  41:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  42:1   error  Expected indentation of 6 spaces but found 12                 indent
+  43:1   error  Expected indentation of 6 spaces but found 12                 indent
+  44:1   error  Expected indentation of 6 spaces but found 12                 indent
+  45:1   error  Expected indentation of 4 spaces but found 8                  indent
+  47:1   error  Expected indentation of 2 spaces but found 4                  indent
+  48:1   error  Expected indentation of 4 spaces but found 8                  indent
+  48:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  48:37  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  49:1   error  Expected indentation of 6 spaces but found 12                 indent
+  50:1   error  Expected indentation of 6 spaces but found 12                 indent
+  51:1   error  Expected indentation of 6 spaces but found 12                 indent
+  52:1   error  Expected indentation of 4 spaces but found 8                  indent
+  54:1   error  Expected indentation of 2 spaces but found 4                  indent
+  55:1   error  Expected indentation of 4 spaces but found 8                  indent
+  55:9   error  Expected no linebreak before this expression                  implicit-arrow-linebreak
+  55:18  error  void is only valid as a return type or generic type argument  @typescript-eslint/no-invalid-void-type
+  55:35  error  Invalid type "number" of template literal expression          @typescript-eslint/restrict-template-expressions
+  56:2   error  Missing semicolon                                             semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\components\CarIcon.tsx
+   6:8   error  Function 'CarIcon' has too many lines (75). Maximum allowed is 40  max-lines-per-function
+   7:1   error  Expected indentation of 2 spaces but found 4                       indent
+   7:38  error  No magic number: 0.55                                              @typescript-eslint/no-magic-numbers
+   7:43  error  Missing semicolon                                                  semi
+   9:1   error  Expected indentation of 2 spaces but found 4                       indent
+  93:1   error  Expected indentation of 2 spaces but found 4                       indent
+  93:6   error  Missing semicolon                                                  semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\components\CarRow.tsx
+    1:8    error  Expected a line break after this opening brace                                                                      object-curly-newline
+    1:51   error  Expected a line break before this closing brace                                                                     object-curly-newline
+    1:65   error  Missing semicolon                                                                                                   semi
+    3:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    4:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    5:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    6:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    7:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    8:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    9:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   10:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   11:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   12:23   error  Missing semicolon                                                                                                   semi
+   13:64   error  Missing semicolon                                                                                                   semi
+   14:8    error  Expected a line break after this opening brace                                                                      object-curly-newline
+   14:57   error  Expected a line break before this closing brace                                                                     object-curly-newline
+   14:91   error  Missing semicolon                                                                                                   semi
+   15:56   error  Missing semicolon                                                                                                   semi
+   16:60   error  Missing semicolon                                                                                                   semi
+   17:36   error  Missing semicolon                                                                                                   semi
+   18:40   error  Missing semicolon                                                                                                   semi
+   20:17   error  Missing semicolon                                                                                                   semi
+   24:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   24:24   error  Missing semicolon                                                                                                   semi
+   25:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   25:16   error  Missing semicolon                                                                                                   semi
+   26:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   55:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   55:6    error  Missing semicolon                                                                                                   semi
+   63:8    error  Function 'CarRow' has too many lines (441). Maximum allowed is 40                                                   max-lines-per-function
+   64:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   64:38   error  Missing semicolon                                                                                                   semi
+   65:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   65:36   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   65:69   error  Missing semicolon                                                                                                   semi
+   66:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   66:37   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   66:66   error  Missing semicolon                                                                                                   semi
+   67:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   67:42   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   67:76   error  Missing semicolon                                                                                                   semi
+   68:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   68:39   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   68:88   error  Missing semicolon                                                                                                   semi
+   69:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   69:58   error  Missing semicolon                                                                                                   semi
+   71:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   71:50   error  Missing semicolon                                                                                                   semi
+   72:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   72:48   error  Missing semicolon                                                                                                   semi
+   73:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   73:47   error  Missing semicolon                                                                                                   semi
+   74:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   74:53   error  Missing semicolon                                                                                                   semi
+   75:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   75:34   error  Missing semicolon                                                                                                   semi
+   76:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   76:36   error  Missing semicolon                                                                                                   semi
+   77:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   77:40   error  Multiple spaces found before '// 0?1 track f...'                                                                    no-multi-spaces
+   77:40   error  Missing semicolon                                                                                                   semi
+   79:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   79:37   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   79:77   error  Missing semicolon                                                                                                   semi
+   81:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   81:45   error  Missing semicolon                                                                                                   semi
+   82:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   82:67   error  Missing semicolon                                                                                                   semi
+   83:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   83:41   error  Missing semicolon                                                                                                   semi
+   84:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   84:54   error  Missing semicolon                                                                                                   semi
+   85:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   85:31   error  Missing semicolon                                                                                                   semi
+   87:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   88:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   88:41   error  Missing semicolon                                                                                                   semi
+   89:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   89:37   error  Missing semicolon                                                                                                   semi
+   90:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   90:39   error  Missing semicolon                                                                                                   semi
+   92:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   92:56   error  Missing semicolon                                                                                                   semi
+   93:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   93:61   error  Multiple spaces found before '// remaining t...'                                                                    no-multi-spaces
+   93:61   error  Missing semicolon                                                                                                   semi
+   94:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   94:36   error  Multiple spaces found before '// captured on...'                                                                    no-multi-spaces
+   94:36   error  Missing semicolon                                                                                                   semi
+   96:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   97:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   97:17   error  Unnecessary conditional, value is always falsy                                                                      @typescript-eslint/no-unnecessary-condition
+   97:27   error  Unnecessary conditional, value is always falsy                                                                      @typescript-eslint/no-unnecessary-condition
+   97:43   error  Missing semicolon                                                                                                   semi
+   98:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   99:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  100:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  100:74   error  Missing semicolon                                                                                                   semi
+  101:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  102:1    error  This line has a length of 105. Maximum allowed is 100                                                               max-len
+  102:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  102:53   error  Unexpected mix of '*' and '/'. Use parentheses to clarify the intended order of operations                          no-mixed-operators
+  102:84   error  Unexpected mix of '*' and '/'. Use parentheses to clarify the intended order of operations                          no-mixed-operators
+  103:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  104:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  104:14   error  Missing semicolon                                                                                                   semi
+  105:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  105:51   error  Invalid type "number" of template literal expression                                                                @typescript-eslint/restrict-template-expressions
+  105:96   error  Missing semicolon                                                                                                   semi
+  106:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  107:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  107:61   error  Missing semicolon                                                                                                   semi
+  108:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  109:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  109:38   error  Missing semicolon                                                                                                   semi
+  110:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  111:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  111:10   error  Missing semicolon                                                                                                   semi
+  112:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  112:53   error  Missing semicolon                                                                                                   semi
+  113:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  113:11   error  Missing semicolon                                                                                                   semi
+  115:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  116:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  117:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  118:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  119:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  120:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  121:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  121:74   error  Missing semicolon                                                                                                   semi
+  122:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  122:55   error  Multiple spaces found before '// wait for sy...'                                                                    no-multi-spaces
+  122:55   error  Missing semicolon                                                                                                   semi
+  124:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  124:33   error  Missing semicolon                                                                                                   semi
+  125:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  125:39   error  Missing semicolon                                                                                                   semi
+  126:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  126:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  126:43   error  Missing semicolon                                                                                                   semi
+  127:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  127:83   error  Missing semicolon                                                                                                   semi
+  129:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  130:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  131:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  132:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  132:49   error  Missing semicolon                                                                                                   semi
+  133:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  133:34   error  Missing semicolon                                                                                                   semi
+  134:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  135:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  135:19   error  Missing semicolon                                                                                                   semi
+  137:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  138:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  139:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  140:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  140:38   error  Missing semicolon                                                                                                   semi
+  141:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  141:42   error  Multiple spaces found before '// clear any s...'                                                                    no-multi-spaces
+  141:42   error  Missing semicolon                                                                                                   semi
+  142:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  142:40   error  Missing semicolon                                                                                                   semi
+  143:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  144:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  144:53   error  Missing semicolon                                                                                                   semi
+  145:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  145:38   error  Missing semicolon                                                                                                   semi
+  146:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  147:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  148:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  148:42   error  Missing semicolon                                                                                                   semi
+  149:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  149:63   error  Missing semicolon                                                                                                   semi
+  150:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  150:53   error  Missing semicolon                                                                                                   semi
+  151:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  152:1    error  Expected indentation of 8 spaces but found 16                                                                       indent
+  152:60   error  Missing semicolon                                                                                                   semi
+  152:64   error  No magic number: 450                                                                                                @typescript-eslint/no-magic-numbers
+  152:68   error  Missing semicolon                                                                                                   semi
+  153:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  154:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  155:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  155:18   error  Missing semicolon                                                                                                   semi
+  157:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  158:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  158:30   error  Missing semicolon                                                                                                   semi
+  159:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  160:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  160:57   error  Missing semicolon                                                                                                   semi
+  161:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  162:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  163:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  164:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  165:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  165:6    error  Missing semicolon                                                                                                   semi
+  167:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  168:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  169:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  170:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  170:49   error  Missing semicolon                                                                                                   semi
+  171:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  171:34   error  Missing semicolon                                                                                                   semi
+  172:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  173:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  174:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  175:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  175:91   error  Missing semicolon                                                                                                   semi
+  176:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  176:62   error  Missing semicolon                                                                                                   semi
+  177:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  177:62   error  Missing semicolon                                                                                                   semi
+  178:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+  178:71   error  Missing semicolon                                                                                                   semi
+  179:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  180:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  180:34   error  Multiple spaces found before '// allow the d...'                                                                    no-multi-spaces
+  180:34   error  Missing semicolon                                                                                                   semi
+  181:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  181:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  181:42   error  Missing semicolon                                                                                                   semi
+  182:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  182:6    error  Missing semicolon                                                                                                   semi
+  184:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  185:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  186:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  186:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  186:42   error  Missing semicolon                                                                                                   semi
+  187:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  187:35   error  Missing semicolon                                                                                                   semi
+  188:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  189:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  189:6    error  Missing semicolon                                                                                                   semi
+  191:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  192:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  192:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  192:41   error  Missing semicolon                                                                                                   semi
+  193:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  194:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  194:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  194:44   error  Missing semicolon                                                                                                   semi
+  195:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  195:30   error  Missing semicolon                                                                                                   semi
+  196:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  196:6    error  Missing semicolon                                                                                                   semi
+  198:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  203:1    error  Expected indentation of 14 spaces but found 16                                                                      indent
+  204:1    error  Expected indentation of 14 spaces but found 16                                                                      indent
+  209:28   error  Expected a line break after this opening brace                                                                      object-curly-newline
+  209:146  error  Expected a line break before this closing brace                                                                     object-curly-newline
+  216:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  217:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  218:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  219:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  220:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  221:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  222:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  223:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  224:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  234:46   error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  234:64   error  Missing semicolon                                                                                                   semi
+  236:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  237:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  238:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  239:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  240:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  241:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  242:1    error  Expected indentation of 32 spaces but found 36                                                                      indent
+  243:1    error  Expected indentation of 32 spaces but found 36                                                                      indent
+  244:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  245:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  246:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  247:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  248:1    error  Expected indentation of 32 spaces but found 36                                                                      indent
+  249:1    error  Expected indentation of 32 spaces but found 36                                                                      indent
+  250:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  263:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  264:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  265:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  266:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  267:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  268:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  269:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  270:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  271:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  272:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  273:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  274:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  275:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  276:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  277:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  286:40   error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+  288:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  289:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  290:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  291:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  292:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  293:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  294:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  295:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  296:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  297:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  298:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  309:40   error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+  311:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  312:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  313:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  314:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  315:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  316:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  317:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  318:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  319:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  320:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  321:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  322:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  323:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  324:1    error  Expected indentation of 28 spaces but found 32                                                                      indent
+  325:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  336:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  337:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  338:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  339:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  340:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  341:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  342:120  error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  344:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  360:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  361:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  362:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  363:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  364:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  365:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  366:67   error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  367:88   error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  369:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  370:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  371:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  377:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  378:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  379:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  380:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  381:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  382:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  383:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  384:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  385:1    error  Expected indentation of 30 spaces but found 32                                                                      indent
+  397:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  398:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  399:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  399:43   error  No magic number: 14                                                                                                 @typescript-eslint/no-magic-numbers
+  399:46   error  Multiple spaces found before '// right edge ...'                                                                    no-multi-spaces
+  400:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  400:39   error  Multiple spaces found before '// left edge o...'                                                                    no-multi-spaces
+  401:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  402:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  410:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  411:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  412:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  412:43   error  No magic number: 18                                                                                                 @typescript-eslint/no-magic-numbers
+  413:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  414:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  415:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  416:68   error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  417:89   error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  419:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  426:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  427:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  428:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  428:43   error  No magic number: 14                                                                                                 @typescript-eslint/no-magic-numbers
+  429:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  430:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  431:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  444:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  445:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  446:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  447:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  448:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  449:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  450:61   error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  451:60   error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  452:65   error  '+' should be placed at the beginning of the line                                                                   operator-linebreak
+  454:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  462:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  463:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  464:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  465:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  466:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  467:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  468:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  469:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  470:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  480:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  481:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  482:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  483:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  484:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  485:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  492:1    error  Expected indentation of 34 spaces but found 36                                                                      indent
+  493:1    error  Expected indentation of 34 spaces but found 36                                                                      indent
+  494:1    error  Expected indentation of 34 spaces but found 36                                                                      indent
+  507:32   error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+  509:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  510:1    error  Expected indentation of 20 spaces but found 24                                                                      indent
+  511:1    error  Expected indentation of 20 spaces but found 24                                                                      indent
+  512:1    error  Expected indentation of 20 spaces but found 24                                                                      indent
+  513:1    error  Expected indentation of 20 spaces but found 24                                                                      indent
+  514:1    error  Expected indentation of 20 spaces but found 24                                                                      indent
+  515:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  533:40   error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+  535:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  536:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  537:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  538:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  547:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  548:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  549:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  550:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  558:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  558:6    error  Missing semicolon                                                                                                   semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\components\LoadingScreen.tsx
+    1:48  error  Missing semicolon                                                        semi
+    3:13  error  Multiple spaces found before '='                                         no-multi-spaces
+    3:19  error  Missing semicolon                                                        semi
+    4:14  error  Multiple spaces found before '='                                         no-multi-spaces
+    4:20  error  Multiple spaces found before '// px ? 2 ? 9 ...'                         no-multi-spaces
+    4:20  error  Missing semicolon                                                        semi
+    5:13  error  Multiple spaces found before '='                                         no-multi-spaces
+    5:20  error  Multiple spaces found before '// px ? 3 tile...'                         no-multi-spaces
+    5:20  error  Missing semicolon                                                        semi
+    6:13  error  Multiple spaces found before '='                                         no-multi-spaces
+    6:20  error  Missing semicolon                                                        semi
+    7:13  error  Multiple spaces found before '='                                         no-multi-spaces
+    7:19  error  Missing semicolon                                                        semi
+    8:20  error  Missing semicolon                                                        semi
+   10:8   error  Function 'LoadingScreen' has too many lines (93). Maximum allowed is 40  max-lines-per-function
+   11:1   error  Expected indentation of 2 spaces but found 4                             indent
+   11:57  error  No magic number: 4                                                       @typescript-eslint/no-magic-numbers
+   11:58  error  Missing semicolon                                                        semi
+   13:1   error  Expected indentation of 2 spaces but found 4                             indent
+   16:1   error  Expected indentation of 14 spaces but found 16                           indent
+   17:1   error  Expected indentation of 14 spaces but found 16                           indent
+   18:1   error  Expected indentation of 14 spaces but found 16                           indent
+   19:1   error  Expected indentation of 14 spaces but found 16                           indent
+   20:1   error  Expected indentation of 14 spaces but found 16                           indent
+   21:1   error  Expected indentation of 14 spaces but found 16                           indent
+   22:1   error  Expected indentation of 14 spaces but found 16                           indent
+   23:1   error  Expected indentation of 14 spaces but found 16                           indent
+   24:1   error  Expected indentation of 14 spaces but found 16                           indent
+   25:1   error  Expected indentation of 14 spaces but found 16                           indent
+   29:22  error  Expected a line break after this opening brace                           object-curly-newline
+   29:89  error  No magic number: 55                                                      @typescript-eslint/no-magic-numbers
+   29:99  error  Expected a line break before this closing brace                          object-curly-newline
+   33:1   error  Expected indentation of 22 spaces but found 24                           indent
+   34:1   error  Expected indentation of 22 spaces but found 24                           indent
+   35:1   error  Expected indentation of 22 spaces but found 24                           indent
+   36:1   error  Expected indentation of 22 spaces but found 24                           indent
+   37:1   error  Expected indentation of 22 spaces but found 24                           indent
+   38:1   error  Expected indentation of 22 spaces but found 24                           indent
+   39:1   error  Expected indentation of 22 spaces but found 24                           indent
+   41:1   error  Expected indentation of 22 spaces but found 24                           indent
+   48:1   error  Expected indentation of 22 spaces but found 24                           indent
+   49:1   error  Expected indentation of 22 spaces but found 24                           indent
+   50:1   error  Expected indentation of 22 spaces but found 24                           indent
+   51:1   error  Expected indentation of 22 spaces but found 24                           indent
+   52:1   error  Expected indentation of 22 spaces but found 24                           indent
+   53:1   error  Expected indentation of 22 spaces but found 24                           indent
+   54:1   error  Expected indentation of 22 spaces but found 24                           indent
+   55:1   error  Expected indentation of 22 spaces but found 24                           indent
+   61:57  error  Invalid type "number" of template literal expression                     @typescript-eslint/restrict-template-expressions
+   61:61  error  No magic number: 0.09                                                    @typescript-eslint/no-magic-numbers
+   63:1   error  Expected indentation of 30 spaces but found 32                           indent
+   64:1   error  Expected indentation of 30 spaces but found 32                           indent
+   65:1   error  Expected indentation of 30 spaces but found 32                           indent
+   65:50  error  No magic number: 20                                                      @typescript-eslint/no-magic-numbers
+   66:1   error  Expected indentation of 30 spaces but found 32                           indent
+   67:1   error  Expected indentation of 30 spaces but found 32                           indent
+   68:1   error  This line has a length of 102. Maximum allowed is 100                    max-len
+   68:1   error  Expected indentation of 30 spaces but found 32                           indent
+   69:1   error  Expected indentation of 30 spaces but found 32                           indent
+   72:37  error  Invalid type "number" of template literal expression                     @typescript-eslint/restrict-template-expressions
+   73:1   error  Expected indentation of 30 spaces but found 32                           indent
+   82:1   error  Expected indentation of 22 spaces but found 24                           indent
+   83:1   error  Expected indentation of 22 spaces but found 24                           indent
+   84:1   error  Expected indentation of 22 spaces but found 24                           indent
+   84:41  error  No magic number: 2                                                       @typescript-eslint/no-magic-numbers
+   85:1   error  Expected indentation of 22 spaces but found 24                           indent
+   85:41  error  No magic number: 2                                                       @typescript-eslint/no-magic-numbers
+   86:1   error  Expected indentation of 22 spaces but found 24                           indent
+   87:1   error  Expected indentation of 22 spaces but found 24                           indent
+   88:1   error  Expected indentation of 22 spaces but found 24                           indent
+   89:1   error  Expected indentation of 22 spaces but found 24                           indent
+   97:1   error  Expected indentation of 18 spaces but found 20                           indent
+   98:1   error  Expected indentation of 18 spaces but found 20                           indent
+   99:1   error  Expected indentation of 18 spaces but found 20                           indent
+  100:1   error  Expected indentation of 18 spaces but found 20                           indent
+  101:1   error  Expected indentation of 18 spaces but found 20                           indent
+  107:1   error  Expected indentation of 2 spaces but found 4                             indent
+  107:6   error  Missing semicolon                                                        semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\components\WinnerModal.tsx
+   2:1   error  Expected indentation of 2 spaces but found 4                           indent
+   3:1   error  Expected indentation of 2 spaces but found 4                           indent
+   4:1   error  Expected indentation of 2 spaces but found 4                           indent
+   5:1   error  Expected indentation of 2 spaces but found 4                           indent
+   6:1   error  Expected indentation of 2 spaces but found 4                           indent
+   7:23  error  Missing semicolon                                                      semi
+   8:36  error  Missing semicolon                                                      semi
+  18:8   error  Function 'WinnerModal' has too many lines (76). Maximum allowed is 40  max-lines-per-function
+  19:1   error  Expected indentation of 2 spaces but found 4                           indent
+  20:1   error  Expected indentation of 2 spaces but found 4                           indent
+  21:1   error  Expected indentation of 2 spaces but found 4                           indent
+  22:1   error  Expected indentation of 2 spaces but found 4                           indent
+  23:1   error  Expected indentation of 2 spaces but found 4                           indent
+  25:1   error  Expected indentation of 2 spaces but found 4                           indent
+  30:1   error  Expected indentation of 14 spaces but found 16                         indent
+  31:1   error  Expected indentation of 16 spaces but found 20                         indent
+  32:1   error  Expected indentation of 16 spaces but found 20                         indent
+  33:1   error  Expected indentation of 16 spaces but found 20                         indent
+  34:1   error  Expected indentation of 16 spaces but found 20                         indent
+  35:1   error  Expected indentation of 16 spaces but found 20                         indent
+  36:1   error  Expected indentation of 16 spaces but found 20                         indent
+  37:1   error  Expected indentation of 16 spaces but found 20                         indent
+  38:1   error  Expected indentation of 14 spaces but found 16                         indent
+  53:1   error  Expected indentation of 22 spaces but found 24                         indent
+  54:1   error  Expected indentation of 22 spaces but found 24                         indent
+  55:1   error  Expected indentation of 22 spaces but found 24                         indent
+  56:1   error  Expected indentation of 22 spaces but found 24                         indent
+  57:1   error  Expected indentation of 22 spaces but found 24                         indent
+  84:1   error  Expected indentation of 22 spaces but found 24                         indent
+  85:1   error  Expected indentation of 22 spaces but found 24                         indent
+  86:1   error  Expected indentation of 22 spaces but found 24                         indent
+  87:1   error  Expected indentation of 22 spaces but found 24                         indent
+  88:1   error  Expected indentation of 22 spaces but found 24                         indent
+  89:1   error  Expected indentation of 24 spaces but found 28                         indent
+  90:1   error  Expected indentation of 22 spaces but found 24                         indent
+  97:1   error  Expected indentation of 2 spaces but found 4                           indent
+  97:6   error  Missing semicolon                                                      semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\main.tsx
+   1:35  error  Missing semicolon                                       semi
+   2:46  error  Missing semicolon                                       semi
+   3:49  error  Missing semicolon                                       semi
+   4:39  error  Missing semicolon                                       semi
+   5:21  error  Missing semicolon                                       semi
+   6:17  error  Unexpected use of file extension "tsx" for "./App.tsx"  import/extensions
+   6:28  error  Missing semicolon                                       semi
+   7:38  error  Missing semicolon                                       semi
+   9:12  error  Forbidden non-null assertion                            @typescript-eslint/no-non-null-assertion
+  17:2   error  Missing semicolon                                       semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\pages\GaragePage.tsx
+    1:44   error  Missing semicolon                                                                                                   semi
+    3:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    4:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    5:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    6:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    7:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    8:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+    9:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   10:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   11:23   error  Missing semicolon                                                                                                   semi
+   12:64   error  Missing semicolon                                                                                                   semi
+   14:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   15:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   16:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   17:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   18:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   19:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   20:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   21:37   error  Missing semicolon                                                                                                   semi
+   22:81   error  Missing semicolon                                                                                                   semi
+   23:58   error  Missing semicolon                                                                                                   semi
+   24:46   error  Missing semicolon                                                                                                   semi
+   25:56   error  Missing semicolon                                                                                                   semi
+   27:236  error  Missing semicolon                                                                                                   semi
+   28:207  error  Missing semicolon                                                                                                   semi
+   29:236  error  Missing semicolon                                                                                                   semi
+   32:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   33:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   33:18   error  Invalid type "string | undefined" of template literal expression                                                    @typescript-eslint/restrict-template-expressions
+   33:71   error  Invalid type "string | undefined" of template literal expression                                                    @typescript-eslint/restrict-template-expressions
+   34:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   35:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   35:8    error  Missing semicolon                                                                                                   semi
+   39:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   40:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   41:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   42:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   43:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   44:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   45:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   46:2    error  Missing semicolon                                                                                                   semi
+   48:1    error  Function 'GaragePage' has too many lines (285). Maximum allowed is 40                                               max-lines-per-function
+   49:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   49:38   error  Missing semicolon                                                                                                   semi
+   50:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   50:11   error  Expected a line break after this opening brace                                                                      object-curly-newline
+   50:52   error  Expected a line break before this closing brace                                                                     object-curly-newline
+   50:71   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   50:93   error  Missing semicolon                                                                                                   semi
+   51:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   51:38   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   51:58   error  Missing semicolon                                                                                                   semi
+   52:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   52:58   error  Missing semicolon                                                                                                   semi
+   54:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   54:49   error  Missing semicolon                                                                                                   semi
+   55:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   55:58   error  Missing semicolon                                                                                                   semi
+   57:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   58:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   59:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   60:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   60:38   error  Missing semicolon                                                                                                   semi
+   61:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   61:28   error  Missing semicolon                                                                                                   semi
+   62:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   62:36   error  Missing semicolon                                                                                                   semi
+   63:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   64:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   64:42   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   64:69   error  Missing semicolon                                                                                                   semi
+   65:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   65:30   error  Missing semicolon                                                                                                   semi
+   66:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   66:32   error  Missing semicolon                                                                                                   semi
+   67:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   68:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   68:6    error  Missing semicolon                                                                                                   semi
+   70:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   70:29   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   70:39   error  Missing semicolon                                                                                                   semi
+   71:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   71:64   error  Missing semicolon                                                                                                   semi
+   72:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   72:53   error  Missing semicolon                                                                                                   semi
+   73:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   73:34   error  Missing semicolon                                                                                                   semi
+   75:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   75:33   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+   75:74   error  Missing semicolon                                                                                                   semi
+   76:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   76:83   error  Missing semicolon                                                                                                   semi
+   78:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   79:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   79:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+   79:39   error  Missing semicolon                                                                                                   semi
+   80:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   80:25   error  Missing semicolon                                                                                                   semi
+   82:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   83:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   84:1    error  Expected indentation of 6 spaces but found 12                                                                       indent
+   84:13   error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+   84:94   error  Missing semicolon                                                                                                   semi
+   85:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   86:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   86:61   error  Missing semicolon                                                                                                   semi
+   88:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   89:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   89:37   error  Missing semicolon                                                                                                   semi
+   90:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   90:26   error  Missing semicolon                                                                                                   semi
+   91:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   91:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+   91:61   error  Missing semicolon                                                                                                   semi
+   92:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   92:24   error  Missing semicolon                                                                                                   semi
+   93:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   93:32   error  Missing semicolon                                                                                                   semi
+   94:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   94:6    error  Missing semicolon                                                                                                   semi
+   96:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+   97:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   97:53   error  Missing semicolon                                                                                                   semi
+   98:1    error  This line has a length of 107. Maximum allowed is 100                                                               max-len
+   98:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   98:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+   98:108  error  Missing semicolon                                                                                                   semi
+   99:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+   99:34   error  Missing semicolon                                                                                                   semi
+  100:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  100:24   error  Missing semicolon                                                                                                   semi
+  101:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  101:32   error  Missing semicolon                                                                                                   semi
+  102:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  102:6    error  Missing semicolon                                                                                                   semi
+  104:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  105:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  105:24   error  Missing semicolon                                                                                                   semi
+  106:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  106:32   error  Missing semicolon                                                                                                   semi
+  107:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  107:34   error  Missing semicolon                                                                                                   semi
+  108:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  108:6    error  Missing semicolon                                                                                                   semi
+  110:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  110:30   error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  110:62   error  Missing semicolon                                                                                                   semi
+  112:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  112:37   error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  112:72   error  Missing semicolon                                                                                                   semi
+  114:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  115:1    error  Expected indentation of 4 spaces but found 8                                                                        indent
+  115:9    error  Expected 'undefined' and instead saw 'void'                                                                         no-void
+  115:47   error  No magic number: 100                                                                                                @typescript-eslint/no-magic-numbers
+  115:91   error  Missing semicolon                                                                                                   semi
+  116:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  116:6    error  Missing semicolon                                                                                                   semi
+  118:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  118:59   error  Missing semicolon                                                                                                   semi
+  120:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  129:60   error  Invalid type "number" of template literal expression                                                                @typescript-eslint/restrict-template-expressions
+  138:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  139:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  140:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  141:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  142:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  143:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  144:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  145:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  146:1    error  Expected indentation of 18 spaces but found 20                                                                      indent
+  154:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  155:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  156:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  157:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  158:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  159:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  160:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  161:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  162:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  163:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  164:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  171:1    error  This line has a length of 107. Maximum allowed is 100                                                               max-len
+  171:79   error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+  173:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  174:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  175:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  176:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  177:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  178:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  187:31   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+  187:36   error  Returning a void expression from an arrow function shorthand is forbidden. Please add braces to the arrow function  @typescript-eslint/no-confusing-void-expression
+  189:32   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+  190:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  190:54   error  Missing semicolon                                                                                                   semi
+  191:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  191:77   error  Missing semicolon                                                                                                   semi
+  203:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  204:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  205:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  206:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  220:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  221:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  222:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  223:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  224:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  237:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  238:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  239:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  240:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  241:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  242:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  243:1    error  Expected indentation of 24 spaces but found 28                                                                      indent
+  244:1    error  Expected indentation of 24 spaces but found 28                                                                      indent
+  245:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  271:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  272:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  273:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  274:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  275:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  276:1    error  Expected indentation of 24 spaces but found 28                                                                      indent
+  277:1    error  Expected indentation of 24 spaces but found 28                                                                      indent
+  278:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  306:25   error  Expected a line break after this opening brace                                                                      object-curly-newline
+  306:64   error  Expected a line break before this closing brace                                                                     object-curly-newline
+  308:31   error  Expected parentheses around arrow function argument                                                                 arrow-parens
+  325:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  326:1    error  Expected indentation of 26 spaces but found 28                                                                      indent
+  338:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  339:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  340:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  341:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  342:1    error  Expected indentation of 22 spaces but found 24                                                                      indent
+  359:1    error  Expected indentation of 2 spaces but found 4                                                                        indent
+  359:6    error  Missing semicolon                                                                                                   semi
+  362:26   error  Missing semicolon                                                                                                   semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\pages\WinnersPage.tsx
+    1:34  error  Missing semicolon                                                       semi
+    2:8   error  Expected a line break after this opening brace                          object-curly-newline
+    2:69  error  Expected a line break before this closing brace                         object-curly-newline
+    2:91  error  Missing semicolon                                                       semi
+    3:64  error  Missing semicolon                                                       semi
+    4:88  error  Missing semicolon                                                       semi
+    5:48  error  Missing semicolon                                                       semi
+    8:1   error  Expected indentation of 2 spaces but found 4                            indent
+    9:1   error  Expected indentation of 2 spaces but found 4                            indent
+   10:1   error  Expected indentation of 2 spaces but found 4                            indent
+   11:1   error  Expected indentation of 2 spaces but found 4                            indent
+   12:1   error  Expected indentation of 2 spaces but found 4                            indent
+   13:2   error  Missing semicolon                                                       semi
+   15:74  error  Missing semicolon                                                       semi
+   17:1   error  Function 'WinnersPage' has too many lines (165). Maximum allowed is 40  max-lines-per-function
+   18:1   error  Expected indentation of 2 spaces but found 4                            indent
+   18:38  error  Missing semicolon                                                       semi
+   19:1   error  Expected indentation of 2 spaces but found 4                            indent
+   19:11  error  Expected a line break after this opening brace                          object-curly-newline
+   19:42  error  Expected a line break before this closing brace                         object-curly-newline
+   19:61  error  Expected parentheses around arrow function argument                     arrow-parens
+   19:84  error  Missing semicolon                                                       semi
+   20:1   error  Expected indentation of 2 spaces but found 4                            indent
+   20:59  error  Missing semicolon                                                       semi
+   22:1   error  Expected indentation of 2 spaces but found 4                            indent
+   23:1   error  Expected indentation of 4 spaces but found 8                            indent
+   23:9   error  Expected 'undefined' and instead saw 'void'                             no-void
+   23:38  error  Missing semicolon                                                       semi
+   24:1   error  Expected indentation of 2 spaces but found 4                            indent
+   24:25  error  Missing semicolon                                                       semi
+   26:1   error  Expected indentation of 2 spaces but found 4                            indent
+   26:54  error  Missing semicolon                                                       semi
+   28:1   error  Expected indentation of 2 spaces but found 4                            indent
+   40:60  error  Invalid type "number" of template literal expression                    @typescript-eslint/restrict-template-expressions
+   73:1   error  Expected indentation of 26 spaces but found 28                          indent
+   74:1   error  Expected indentation of 26 spaces but found 28                          indent
+   75:1   error  Expected indentation of 26 spaces but found 28                          indent
+   76:1   error  Expected indentation of 26 spaces but found 28                          indent
+   77:1   error  Expected indentation of 26 spaces but found 28                          indent
+   78:1   error  Expected indentation of 26 spaces but found 28                          indent
+   79:1   error  Expected indentation of 26 spaces but found 28                          indent
+   80:1   error  Expected indentation of 26 spaces but found 28                          indent
+   83:72  error  Expected parentheses around arrow function argument                     arrow-parens
+   88:1   error  Expected indentation of 34 spaces but found 36                          indent
+   89:1   error  Expected indentation of 34 spaces but found 36                          indent
+   90:1   error  Expected indentation of 34 spaces but found 36                          indent
+   91:1   error  Expected indentation of 34 spaces but found 36                          indent
+   92:1   error  Expected indentation of 34 spaces but found 36                          indent
+  104:29  error  Expected a line break after this opening brace                          object-curly-newline
+  104:68  error  Expected a line break before this closing brace                         object-curly-newline
+  106:52  error  Arrow function has too many lines (64). Maximum allowed is 40           max-lines-per-function
+  114:1   error  Expected indentation of 38 spaces but found 40                          indent
+  115:1   error  Expected indentation of 38 spaces but found 40                          indent
+  116:1   error  Expected indentation of 38 spaces but found 40                          indent
+  117:1   error  Expected indentation of 38 spaces but found 40                          indent
+  124:80  error  No magic number: 3                                                      @typescript-eslint/no-magic-numbers
+  124:88  error  No magic number: 0.45                                                   @typescript-eslint/no-magic-numbers
+  127:67  error  No magic number: 2                                                      @typescript-eslint/no-magic-numbers
+  128:67  error  No magic number: 3                                                      @typescript-eslint/no-magic-numbers
+  129:65  error  No magic number: 3                                                      @typescript-eslint/no-magic-numbers
+  148:1   error  Expected indentation of 46 spaces but found 48                          indent
+  149:1   error  Expected indentation of 46 spaces but found 48                          indent
+  150:1   error  Expected indentation of 46 spaces but found 48                          indent
+  151:1   error  Expected indentation of 46 spaces but found 48                          indent
+  152:1   error  Expected indentation of 46 spaces but found 48                          indent
+  153:1   error  Expected indentation of 46 spaces but found 48                          indent
+  154:1   error  Expected indentation of 46 spaces but found 48                          indent
+  163:1   error  Expected indentation of 42 spaces but found 44                          indent
+  164:1   error  Expected indentation of 42 spaces but found 44                          indent
+  165:1   error  Expected indentation of 42 spaces but found 44                          indent
+  166:1   error  Expected indentation of 42 spaces but found 44                          indent
+  169:62  error  No magic number: 2                                                      @typescript-eslint/no-magic-numbers
+  185:1   error  Expected indentation of 26 spaces but found 28                          indent
+  186:1   error  Expected indentation of 26 spaces but found 28                          indent
+  187:1   error  Expected indentation of 28 spaces but found 32                          indent
+  188:1   error  Expected indentation of 26 spaces but found 28                          indent
+  194:1   error  Expected indentation of 2 spaces but found 4                            indent
+  194:6   error  Missing semicolon                                                       semi
+  197:27  error  Missing semicolon                                                       semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\routes\routeConfig.tsx
+   1:42  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   1:42  error  Missing semicolon                                semi
+   2:45  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   2:45  error  Missing semicolon                                semi
+   3:47  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   3:47  error  Missing semicolon                                semi
+   4:1   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   5:44  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   6:1   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   7:35  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   8:18  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+   9:18  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  10:17  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  11:26  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  12:2   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  13:1   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  14:48  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  15:1   error  Expected indentation of 2 spaces but found 4     indent
+  15:6   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  16:1   error  Expected indentation of 4 spaces but found 8     indent
+  16:23  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  17:1   error  Expected indentation of 4 spaces but found 8     indent
+  17:25  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  18:1   error  Expected indentation of 4 spaces but found 8     indent
+  18:25  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  19:1   error  Expected indentation of 4 spaces but found 8     indent
+  19:33  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  20:1   error  Expected indentation of 2 spaces but found 4     indent
+  20:7   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  21:1   error  Expected indentation of 2 spaces but found 4     indent
+  21:6   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  22:1   error  Expected indentation of 4 spaces but found 8     indent
+  22:24  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  23:1   error  Expected indentation of 4 spaces but found 8     indent
+  23:26  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  24:1   error  Expected indentation of 4 spaces but found 8     indent
+  24:26  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  25:1   error  Expected indentation of 4 spaces but found 8     indent
+  25:34  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  26:1   error  Expected indentation of 2 spaces but found 4     indent
+  26:7   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  27:2   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  27:2   error  Missing semicolon                                semi
+  28:1   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  29:47  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  30:1   error  Expected indentation of 2 spaces but found 4     indent
+  30:76  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  30:76  error  Missing semicolon                                semi
+  31:2   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\store\appSlice.ts
+   1:67  error  Missing semicolon                                     semi
+  10:1   error  Expected indentation of 2 spaces but found 4          indent
+  11:2   error  Missing semicolon                                     semi
+  14:1   error  Expected indentation of 2 spaces but found 4          indent
+  15:1   error  Expected indentation of 2 spaces but found 4          indent
+  16:1   error  Expected indentation of 2 spaces but found 4          indent
+  17:1   error  Expected indentation of 4 spaces but found 8          indent
+  18:1   error  Expected indentation of 6 spaces but found 12         indent
+  18:13  error  Assignment to property of function parameter 'state'  no-param-reassign
+  18:47  error  Missing semicolon                                     semi
+  19:1   error  Expected indentation of 4 spaces but found 8          indent
+  20:1   error  Expected indentation of 2 spaces but found 4          indent
+  21:3   error  Missing semicolon                                     semi
+  23:51  error  Missing semicolon                                     semi
+  24:32  error  Missing semicolon                                     semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\store\hooks.ts
+  1:82  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  1:82  error  Missing semicolon                                semi
+  2:54  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  2:54  error  Missing semicolon                                semi
+  3:1   error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  4:61  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  4:61  error  Missing semicolon                                semi
+  5:75  error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style
+  5:75  error  Missing semicolon                                semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\store\slices\garageSlice.ts
+   1:85  error  Missing semicolon                                     semi
+   2:48  error  Missing semicolon                                     semi
+   3:54  error  Missing semicolon                                     semi
+   5:34  error  Missing semicolon                                     semi
+  16:1   error  Expected indentation of 2 spaces but found 4          indent
+  17:1   error  Expected indentation of 2 spaces but found 4          indent
+  18:1   error  Expected indentation of 2 spaces but found 4          indent
+  19:1   error  Expected indentation of 2 spaces but found 4          indent
+  20:1   error  Expected indentation of 2 spaces but found 4          indent
+  21:2   error  Missing semicolon                                     semi
+  24:1   error  Expected indentation of 2 spaces but found 4          indent
+  24:5   error  Expected no linebreak before this expression          implicit-arrow-linebreak
+  25:1   error  Unexpected newline before ')'                         function-paren-newline
+  25:2   error  Missing semicolon                                     semi
+  28:1   error  Expected indentation of 2 spaces but found 4          indent
+  28:5   error  Expected no linebreak before this expression          implicit-arrow-linebreak
+  29:1   error  Unexpected newline before ')'                         function-paren-newline
+  29:2   error  Missing semicolon                                     semi
+  32:1   error  Expected indentation of 2 spaces but found 4          indent
+  33:1   error  Expected indentation of 2 spaces but found 4          indent
+  34:2   error  Missing semicolon                                     semi
+  37:1   error  Expected indentation of 2 spaces but found 4          indent
+  37:34  error  Missing semicolon                                     semi
+  38:1   error  Expected indentation of 2 spaces but found 4          indent
+  38:14  error  Missing semicolon                                     semi
+  39:3   error  Missing semicolon                                     semi
+  42:1   error  Expected indentation of 2 spaces but found 4          indent
+  42:5   error  Expected no linebreak before this expression          implicit-arrow-linebreak
+  42:26  error  Expected parentheses around arrow function argument   arrow-parens
+  43:1   error  Unexpected newline before ')'                         function-paren-newline
+  43:2   error  Missing semicolon                                     semi
+  46:1   error  Expected indentation of 2 spaces but found 4          indent
+  47:1   error  Expected indentation of 2 spaces but found 4          indent
+  48:1   error  Expected indentation of 2 spaces but found 4          indent
+  49:1   error  Expected indentation of 4 spaces but found 8          indent
+  50:1   error  Expected indentation of 6 spaces but found 12         indent
+  50:13  error  Assignment to property of function parameter 'state'  no-param-reassign
+  50:40  error  Missing semicolon                                     semi
+  51:1   error  Expected indentation of 4 spaces but found 8          indent
+  52:1   error  Expected indentation of 4 spaces but found 8          indent
+  53:1   error  Expected indentation of 6 spaces but found 12         indent
+  53:13  error  Assignment to property of function parameter 'state'  no-param-reassign
+  53:47  error  Missing semicolon                                     semi
+  54:1   error  Expected indentation of 4 spaces but found 8          indent
+  55:1   error  Expected indentation of 2 spaces but found 4          indent
+  56:1   error  Expected indentation of 2 spaces but found 4          indent
+  56:20  error  Expected parentheses around arrow function argument   arrow-parens
+  57:1   error  Expected indentation of 4 spaces but found 8          indent
+  58:1   error  Expected indentation of 6 spaces but found 12         indent
+  58:41  error  Expected parentheses around arrow function argument   arrow-parens
+  59:1   error  Expected indentation of 8 spaces but found 16         indent
+  59:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  59:41  error  Missing semicolon                                     semi
+  60:1   error  Expected indentation of 6 spaces but found 12         indent
+  61:1   error  Expected indentation of 6 spaces but found 12         indent
+  62:1   error  Expected indentation of 8 spaces but found 16         indent
+  62:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  62:38  error  Missing semicolon                                     semi
+  63:1   error  Expected indentation of 8 spaces but found 16         indent
+  63:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  63:49  error  Missing semicolon                                     semi
+  64:1   error  Expected indentation of 8 spaces but found 16         indent
+  64:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  64:51  error  Missing semicolon                                     semi
+  65:1   error  Expected indentation of 6 spaces but found 12         indent
+  66:1   error  Expected indentation of 6 spaces but found 12         indent
+  66:42  error  Expected parentheses around arrow function argument   arrow-parens
+  67:1   error  Expected indentation of 8 spaces but found 16         indent
+  67:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  67:40  error  Missing semicolon                                     semi
+  68:1   error  Expected indentation of 6 spaces but found 12         indent
+  69:1   error  Expected indentation of 6 spaces but found 12         indent
+  70:1   error  Expected indentation of 8 spaces but found 16         indent
+  70:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  70:33  error  Missing semicolon                                     semi
+  71:1   error  Expected indentation of 8 spaces but found 16         indent
+  72:1   error  Expected indentation of 10 spaces but found 20        indent
+  72:52  error  Missing semicolon                                     semi
+  73:1   error  Expected indentation of 8 spaces but found 16         indent
+  74:1   error  Expected indentation of 6 spaces but found 12         indent
+  75:1   error  Expected indentation of 6 spaces but found 12         indent
+  76:1   error  Expected indentation of 8 spaces but found 16         indent
+  76:50  error  Expected parentheses around arrow function argument   arrow-parens
+  76:82  error  Missing semicolon                                     semi
+  77:1   error  Expected indentation of 8 spaces but found 16         indent
+  77:33  error  Assignment to property of function parameter 'state'  no-param-reassign
+  77:65  error  Missing semicolon                                     semi
+  78:1   error  Expected indentation of 8 spaces but found 16         indent
+  78:66  error  Assignment to property of function parameter 'state'  no-param-reassign
+  78:90  error  Missing semicolon                                     semi
+  79:1   error  Expected indentation of 6 spaces but found 12         indent
+  80:1   error  Expected indentation of 6 spaces but found 12         indent
+  81:1   error  Expected indentation of 8 spaces but found 16         indent
+  81:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  81:48  error  Expected parentheses around arrow function argument   arrow-parens
+  81:77  error  Missing semicolon                                     semi
+  82:1   error  Expected indentation of 8 spaces but found 16         indent
+  82:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  82:33  error  Missing semicolon                                     semi
+  83:1   error  Expected indentation of 6 spaces but found 12         indent
+  84:1   error  Expected indentation of 6 spaces but found 12         indent
+  85:1   error  Expected indentation of 8 spaces but found 16         indent
+  85:17  error  Assignment to property of function parameter 'state'  no-param-reassign
+  85:53  error  Missing semicolon                                     semi
+  86:1   error  Expected indentation of 6 spaces but found 12         indent
+  86:15  error  Missing semicolon                                     semi
+  87:1   error  Expected indentation of 2 spaces but found 4          indent
+  88:3   error  Missing semicolon                                     semi
+  90:58  error  Missing semicolon                                     semi
+  91:35  error  Missing semicolon                                     semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\store\slices\raceSlice.ts
+    1:85  error  Missing semicolon                                                      semi
+    2:48  error  Missing semicolon                                                      semi
+    3:54  error  Missing semicolon                                                      semi
+   23:1   error  Expected indentation of 2 spaces but found 4                           indent
+   24:1   error  Expected indentation of 2 spaces but found 4                           indent
+   25:1   error  Expected indentation of 2 spaces but found 4                           indent
+   26:1   error  Expected indentation of 2 spaces but found 4                           indent
+   27:1   error  Expected indentation of 2 spaces but found 4                           indent
+   28:2   error  Missing semicolon                                                      semi
+   31:1   error  Expected indentation of 2 spaces but found 4                           indent
+   31:76  error  Missing semicolon                                                      semi
+   32:1   error  Expected indentation of 2 spaces but found 4                           indent
+   32:38  error  Missing semicolon                                                      semi
+   33:3   error  Missing semicolon                                                      semi
+   36:1   error  Expected indentation of 2 spaces but found 4                           indent
+   36:45  error  Missing semicolon                                                      semi
+   37:1   error  Expected indentation of 2 spaces but found 4                           indent
+   37:14  error  Missing semicolon                                                      semi
+   38:3   error  Missing semicolon                                                      semi
+   41:1   error  Expected indentation of 2 spaces but found 4                           indent
+   42:1   error  Expected indentation of 2 spaces but found 4                           indent
+   43:1   error  Expected indentation of 4 spaces but found 8                           indent
+   43:54  error  Missing semicolon                                                      semi
+   44:1   error  Expected indentation of 4 spaces but found 8                           indent
+   44:35  error  Missing semicolon                                                      semi
+   45:1   error  Expected indentation of 2 spaces but found 4                           indent
+   46:2   error  Missing semicolon                                                      semi
+   54:1   error  Expected indentation of 2 spaces but found 4                           indent
+   55:1   error  Expected indentation of 2 spaces but found 4                           indent
+   56:1   error  Expected indentation of 4 spaces but found 8                           indent
+   56:38  error  Expected parentheses around arrow function argument                    arrow-parens
+   56:71  error  Missing semicolon                                                      semi
+   57:1   error  Expected indentation of 4 spaces but found 8                           indent
+   57:33  error  Missing semicolon                                                      semi
+   58:1   error  Expected indentation of 2 spaces but found 4                           indent
+   59:2   error  Missing semicolon                                                      semi
+   62:1   error  Expected indentation of 2 spaces but found 4                           indent
+   63:1   error  Expected indentation of 2 spaces but found 4                           indent
+   64:1   error  Expected indentation of 4 spaces but found 8                           indent
+   64:38  error  Expected parentheses around arrow function argument                    arrow-parens
+   64:70  error  Missing semicolon                                                      semi
+   65:1   error  Expected indentation of 2 spaces but found 4                           indent
+   66:2   error  Missing semicolon                                                      semi
+   69:1   error  Expected indentation of 2 spaces but found 4                           indent
+   70:1   error  Expected indentation of 2 spaces but found 4                           indent
+   71:1   error  Expected indentation of 2 spaces but found 4                           indent
+   72:1   error  Expected indentation of 4 spaces but found 8                           indent
+   73:1   error  Expected indentation of 6 spaces but found 12                          indent
+   73:42  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   73:73  error  Missing semicolon                                                      semi
+   74:1   error  Expected indentation of 4 spaces but found 8                           indent
+   75:1   error  Expected indentation of 4 spaces but found 8                           indent
+   75:22  error  Expected parentheses around arrow function argument                    arrow-parens
+   76:1   error  Expected indentation of 6 spaces but found 12                          indent
+   76:13  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   76:34  error  Missing semicolon                                                      semi
+   77:1   error  Expected indentation of 6 spaces but found 12                          indent
+   77:13  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   77:36  error  Missing semicolon                                                      semi
+   78:1   error  Expected indentation of 4 spaces but found 8                           indent
+   79:1   error  Expected indentation of 4 spaces but found 8                           indent
+   80:1   error  Expected indentation of 6 spaces but found 12                          indent
+   80:20  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   80:31  error  Do not delete dynamically computed property keys                       @typescript-eslint/no-dynamic-delete
+   80:46  error  Missing semicolon                                                      semi
+   81:1   error  Expected indentation of 4 spaces but found 8                           indent
+   82:1   error  Expected indentation of 4 spaces but found 8                           indent
+   82:20  error  Expected parentheses around arrow function argument                    arrow-parens
+   83:1   error  Expected indentation of 6 spaces but found 12                          indent
+   83:13  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   83:35  error  Missing semicolon                                                      semi
+   84:1   error  Expected indentation of 6 spaces but found 12                          indent
+   84:13  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   84:39  error  Missing semicolon                                                      semi
+   85:1   error  Expected indentation of 6 spaces but found 12                          indent
+   85:13  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   85:34  error  Missing semicolon                                                      semi
+   86:1   error  Expected indentation of 6 spaces but found 12                          indent
+   86:13  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   86:36  error  Missing semicolon                                                      semi
+   87:1   error  Expected indentation of 6 spaces but found 12                          indent
+   87:13  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   87:28  error  Missing semicolon                                                      semi
+   88:1   error  Expected indentation of 4 spaces but found 8                           indent
+   89:1   error  Expected indentation of 2 spaces but found 4                           indent
+   90:1   error  Expected indentation of 2 spaces but found 4                           indent
+   90:5   error  Method 'extraReducers' has too many lines (50). Maximum allowed is 40  max-lines-per-function
+   90:20  error  Expected parentheses around arrow function argument                    arrow-parens
+   91:1   error  Expected indentation of 4 spaces but found 8                           indent
+   92:1   error  Expected indentation of 6 spaces but found 12                          indent
+   93:1   error  Expected indentation of 8 spaces but found 16                          indent
+   93:66  error  Missing semicolon                                                      semi
+   94:1   error  Expected indentation of 8 spaces but found 16                          indent
+   94:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+   95:1   error  Expected indentation of 10 spaces but found 20                         indent
+   96:1   error  Expected indentation of 10 spaces but found 20                         indent
+   97:1   error  Expected indentation of 10 spaces but found 20                         indent
+   98:1   error  Expected indentation of 10 spaces but found 20                         indent
+   99:1   error  Expected indentation of 10 spaces but found 20                         indent
+  100:1   error  Expected indentation of 8 spaces but found 16                          indent
+  100:18  error  Missing semicolon                                                      semi
+  101:1   error  Expected indentation of 6 spaces but found 12                          indent
+  102:1   error  Expected indentation of 6 spaces but found 12                          indent
+  103:1   error  Expected indentation of 8 spaces but found 16                          indent
+  103:59  error  Missing semicolon                                                      semi
+  104:1   error  Expected indentation of 8 spaces but found 16                          indent
+  105:1   error  Expected indentation of 10 spaces but found 20                         indent
+  105:21  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  105:93  error  Missing semicolon                                                      semi
+  106:1   error  Expected indentation of 8 spaces but found 16                          indent
+  107:1   error  Expected indentation of 8 spaces but found 16                          indent
+  108:1   error  Expected indentation of 8 spaces but found 16                          indent
+  109:1   error  Expected indentation of 10 spaces but found 20                         indent
+  109:36  error  '&&' should be placed at the beginning of the line                     operator-linebreak
+  110:47  error  '&&' should be placed at the beginning of the line                     operator-linebreak
+  111:45  error  '&&' should be placed at the beginning of the line                     operator-linebreak
+  113:1   error  Expected indentation of 8 spaces but found 16                          indent
+  114:1   error  Expected indentation of 10 spaces but found 20                         indent
+  114:21  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  114:40  error  Missing semicolon                                                      semi
+  115:1   error  Expected indentation of 10 spaces but found 20                         indent
+  115:21  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  115:68  error  No magic number: 1000                                                  @typescript-eslint/no-magic-numbers
+  115:82  error  No magic number: 2                                                     @typescript-eslint/no-magic-numbers
+  115:84  error  Missing semicolon                                                      semi
+  116:1   error  Expected indentation of 10 spaces but found 20                         indent
+  116:21  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  116:43  error  Missing semicolon                                                      semi
+  117:1   error  Expected indentation of 8 spaces but found 16                          indent
+  118:1   error  Expected indentation of 6 spaces but found 12                          indent
+  119:1   error  Expected indentation of 6 spaces but found 12                          indent
+  120:1   error  Expected indentation of 8 spaces but found 16                          indent
+  120:42  error  Missing semicolon                                                      semi
+  121:1   error  Expected indentation of 8 spaces but found 16                          indent
+  121:37  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  121:70  error  Missing semicolon                                                      semi
+  122:1   error  Expected indentation of 6 spaces but found 12                          indent
+  123:1   error  Expected indentation of 6 spaces but found 12                          indent
+  123:41  error  Expected parentheses around arrow function argument                    arrow-parens
+  124:1   error  Expected indentation of 8 spaces but found 16                          indent
+  124:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  124:38  error  Missing semicolon                                                      semi
+  125:1   error  Expected indentation of 8 spaces but found 16                          indent
+  125:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  125:43  error  Missing semicolon                                                      semi
+  126:1   error  Expected indentation of 8 spaces but found 16                          indent
+  126:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  126:38  error  Missing semicolon                                                      semi
+  127:1   error  Expected indentation of 8 spaces but found 16                          indent
+  127:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  127:40  error  Missing semicolon                                                      semi
+  128:1   error  Expected indentation of 8 spaces but found 16                          indent
+  128:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  128:32  error  Missing semicolon                                                      semi
+  129:1   error  Expected indentation of 6 spaces but found 12                          indent
+  130:1   error  Expected indentation of 6 spaces but found 12                          indent
+  131:1   error  Expected indentation of 8 spaces but found 16                          indent
+  132:1   error  Expected indentation of 8 spaces but found 16                          indent
+  132:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  132:53  error  Missing semicolon                                                      semi
+  133:1   error  Expected indentation of 6 spaces but found 12                          indent
+  134:1   error  Expected indentation of 6 spaces but found 12                          indent
+  134:46  error  Expected parentheses around arrow function argument                    arrow-parens
+  135:1   error  Expected indentation of 8 spaces but found 16                          indent
+  135:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  135:39  error  Missing semicolon                                                      semi
+  136:1   error  Expected indentation of 8 spaces but found 16                          indent
+  136:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  136:43  error  Missing semicolon                                                      semi
+  137:1   error  Expected indentation of 8 spaces but found 16                          indent
+  137:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  137:38  error  Missing semicolon                                                      semi
+  138:1   error  Expected indentation of 8 spaces but found 16                          indent
+  138:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  138:40  error  Missing semicolon                                                      semi
+  139:1   error  Expected indentation of 8 spaces but found 16                          indent
+  139:17  error  Assignment to property of function parameter 'state'                   no-param-reassign
+  139:32  error  Missing semicolon                                                      semi
+  140:1   error  Expected indentation of 6 spaces but found 12                          indent
+  140:15  error  Missing semicolon                                                      semi
+  141:1   error  Expected indentation of 2 spaces but found 4                           indent
+  142:3   error  Missing semicolon                                                      semi
+  144:14  error  Expected a line break after this opening brace                         object-curly-newline
+  144:62  error  Expected a line break before this closing brace                        object-curly-newline
+  144:83  error  Missing semicolon                                                      semi
+  145:33  error  Missing semicolon                                                      semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\store\slices\winnersSlice.ts
+    1:85  error  Missing semicolon                                              semi
+    2:88  error  Missing semicolon                                              semi
+    3:48  error  Missing semicolon                                              semi
+    4:56  error  Missing semicolon                                              semi
+    5:42  error  Missing semicolon                                              semi
+    7:36  error  Missing semicolon                                              semi
+   19:1   error  Expected indentation of 2 spaces but found 4                   indent
+   20:1   error  Expected indentation of 2 spaces but found 4                   indent
+   21:1   error  Expected indentation of 2 spaces but found 4                   indent
+   22:1   error  Expected indentation of 2 spaces but found 4                   indent
+   23:1   error  Expected indentation of 2 spaces but found 4                   indent
+   24:1   error  Expected indentation of 2 spaces but found 4                   indent
+   25:2   error  Missing semicolon                                              semi
+   28:1   error  Expected indentation of 2 spaces but found 4                   indent
+   29:1   error  Expected indentation of 2 spaces but found 4                   indent
+   29:15  error  void is only valid as a return type or generic type argument   @typescript-eslint/no-invalid-void-type
+   30:1   error  Expected indentation of 4 spaces but found 8                   indent
+   30:72  error  Missing semicolon                                              semi
+   31:1   error  Expected indentation of 4 spaces but found 8                   indent
+   32:1   error  Expected indentation of 6 spaces but found 12                  indent
+   33:1   error  Expected indentation of 6 spaces but found 12                  indent
+   34:1   error  Expected indentation of 6 spaces but found 12                  indent
+   35:1   error  Expected indentation of 6 spaces but found 12                  indent
+   36:1   error  Expected indentation of 4 spaces but found 8                   indent
+   36:11  error  Missing semicolon                                              semi
+   38:1   error  Expected indentation of 4 spaces but found 8                   indent
+   39:1   error  Expected indentation of 4 spaces but found 8                   indent
+   39:65  error  Expected parentheses around arrow function argument            arrow-parens
+   39:94  error  Missing semicolon                                              semi
+   41:1   error  Expected indentation of 4 spaces but found 8                   indent
+   42:1   error  Expected indentation of 6 spaces but found 12                  indent
+   42:41  error  Missing semicolon                                              semi
+   43:1   error  Expected indentation of 6 spaces but found 12                  indent
+   44:1   error  Expected indentation of 8 spaces but found 16                  indent
+   45:1   error  Expected indentation of 8 spaces but found 16                  indent
+   45:17  error  Unsafe assignment of an error typed value                      @typescript-eslint/no-unsafe-assignment
+   45:68  error  Unsafe member access .name on a type that cannot be resolved   @typescript-eslint/no-unsafe-member-access
+   45:83  error  Invalid type "number" of template literal expression           @typescript-eslint/restrict-template-expressions
+   46:1   error  Expected indentation of 8 spaces but found 16                  indent
+   46:17  error  Unsafe assignment of an error typed value                      @typescript-eslint/no-unsafe-assignment
+   46:69  error  Unsafe member access .color on a type that cannot be resolved  @typescript-eslint/no-unsafe-member-access
+   47:1   error  Expected indentation of 6 spaces but found 12                  indent
+   47:14  error  Missing semicolon                                              semi
+   48:1   error  Expected indentation of 4 spaces but found 8                   indent
+   48:11  error  Missing semicolon                                              semi
+   50:1   error  Expected indentation of 4 spaces but found 8                   indent
+   50:51  error  Missing semicolon                                              semi
+   51:1   error  Expected indentation of 2 spaces but found 4                   indent
+   52:2   error  Missing semicolon                                              semi
+   55:1   error  Expected indentation of 2 spaces but found 4                   indent
+   56:1   error  Expected indentation of 2 spaces but found 4                   indent
+   57:1   error  Expected indentation of 4 spaces but found 8                   indent
+   58:1   error  Expected indentation of 6 spaces but found 12                  indent
+   58:60  error  Missing semicolon                                              semi
+   59:1   error  Expected indentation of 6 spaces but found 12                  indent
+   59:20  error  Returning an awaited promise is required in this context       @typescript-eslint/return-await
+   60:1   error  Expected indentation of 8 spaces but found 16                  indent
+   61:1   error  Expected indentation of 8 spaces but found 16                  indent
+   62:1   error  Expected indentation of 6 spaces but found 12                  indent
+   62:15  error  Missing semicolon                                              semi
+   63:1   error  Expected indentation of 4 spaces but found 8                   indent
+   64:1   error  Expected indentation of 6 spaces but found 12                  indent
+   64:66  error  Missing semicolon                                              semi
+   65:1   error  Expected indentation of 4 spaces but found 8                   indent
+   66:1   error  Expected indentation of 2 spaces but found 4                   indent
+   67:2   error  Missing semicolon                                              semi
+   70:1   error  Expected indentation of 2 spaces but found 4                   indent
+   70:38  error  Missing semicolon                                              semi
+   71:1   error  Expected indentation of 2 spaces but found 4                   indent
+   71:14  error  Missing semicolon                                              semi
+   72:3   error  Missing semicolon                                              semi
+   75:1   error  Expected indentation of 2 spaces but found 4                   indent
+   76:1   error  Expected indentation of 2 spaces but found 4                   indent
+   77:1   error  Expected indentation of 2 spaces but found 4                   indent
+   78:1   error  Expected indentation of 4 spaces but found 8                   indent
+   79:1   error  Expected indentation of 6 spaces but found 12                  indent
+   79:13  error  Assignment to property of function parameter 'state'           no-param-reassign
+   79:40  error  Missing semicolon                                              semi
+   80:1   error  Expected indentation of 4 spaces but found 8                   indent
+   81:1   error  Expected indentation of 4 spaces but found 8                   indent
+   82:1   error  Expected indentation of 6 spaces but found 12                  indent
+   83:1   error  Expected indentation of 8 spaces but found 16                  indent
+   83:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+   83:69  error  Missing semicolon                                              semi
+   84:1   error  Expected indentation of 6 spaces but found 12                  indent
+   85:1   error  Expected indentation of 8 spaces but found 16                  indent
+   85:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+   85:44  error  Missing semicolon                                              semi
+   86:1   error  Expected indentation of 8 spaces but found 16                  indent
+   86:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+   86:36  error  Missing semicolon                                              semi
+   87:1   error  Expected indentation of 6 spaces but found 12                  indent
+   88:1   error  Expected indentation of 4 spaces but found 8                   indent
+   89:1   error  Expected indentation of 2 spaces but found 4                   indent
+   90:1   error  Expected indentation of 2 spaces but found 4                   indent
+   90:20  error  Expected parentheses around arrow function argument            arrow-parens
+   91:1   error  Expected indentation of 4 spaces but found 8                   indent
+   92:1   error  Expected indentation of 6 spaces but found 12                  indent
+   92:44  error  Expected parentheses around arrow function argument            arrow-parens
+   93:1   error  Expected indentation of 8 spaces but found 16                  indent
+   93:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+   93:41  error  Missing semicolon                                              semi
+   94:1   error  Expected indentation of 6 spaces but found 12                  indent
+   95:1   error  Expected indentation of 6 spaces but found 12                  indent
+   96:1   error  Expected indentation of 8 spaces but found 16                  indent
+   96:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+   96:38  error  Missing semicolon                                              semi
+   97:1   error  Expected indentation of 8 spaces but found 16                  indent
+   97:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+   97:55  error  Missing semicolon                                              semi
+   98:1   error  Expected indentation of 8 spaces but found 16                  indent
+   98:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+   98:51  error  Missing semicolon                                              semi
+   99:1   error  Expected indentation of 6 spaces but found 12                  indent
+  100:1   error  Expected indentation of 6 spaces but found 12                  indent
+  100:45  error  Expected parentheses around arrow function argument            arrow-parens
+  101:1   error  Expected indentation of 8 spaces but found 16                  indent
+  101:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+  101:40  error  Missing semicolon                                              semi
+  102:1   error  Expected indentation of 6 spaces but found 12                  indent
+  103:1   error  Expected indentation of 6 spaces but found 12                  indent
+  104:1   error  Expected indentation of 8 spaces but found 16                  indent
+  105:1   error  Expected indentation of 8 spaces but found 16                  indent
+  105:53  error  Expected parentheses around arrow function argument            arrow-parens
+  105:85  error  Missing semicolon                                              semi
+  106:1   error  Expected indentation of 8 spaces but found 16                  indent
+  107:1   error  Expected indentation of 10 spaces but found 20                 indent
+  107:21  error  Assignment to property of function parameter 'state'           no-param-reassign
+  107:66  error  Missing semicolon                                              semi
+  108:1   error  Expected indentation of 10 spaces but found 20                 indent
+  108:21  error  Assignment to property of function parameter 'state'           no-param-reassign
+  108:66  error  Missing semicolon                                              semi
+  109:1   error  Expected indentation of 8 spaces but found 16                  indent
+  110:1   error  Expected indentation of 6 spaces but found 12                  indent
+  111:1   error  Expected indentation of 6 spaces but found 12                  indent
+  112:1   error  Expected indentation of 8 spaces but found 16                  indent
+  112:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+  112:54  error  Expected parentheses around arrow function argument            arrow-parens
+  112:83  error  Missing semicolon                                              semi
+  113:1   error  Expected indentation of 8 spaces but found 16                  indent
+  113:17  error  Assignment to property of function parameter 'state'           no-param-reassign
+  113:33  error  Missing semicolon                                              semi
+  114:1   error  Expected indentation of 6 spaces but found 12                  indent
+  114:15  error  Missing semicolon                                              semi
+  115:1   error  Expected indentation of 2 spaces but found 4                   indent
+  116:3   error  Missing semicolon                                              semi
+  118:57  error  Missing semicolon                                              semi
+  119:36  error  Missing semicolon                                              semi
+
+C:\Users\PC\Documents\Projects\epam\New folder\race-app\src\store\store.ts
+   1:50  error  Missing semicolon                             semi
+   2:49  error  Missing semicolon                             semi
+   3:51  error  Missing semicolon                             semi
+   4:45  error  Missing semicolon                             semi
+   7:1   error  Expected indentation of 2 spaces but found 4  indent
+   8:1   error  Expected indentation of 4 spaces but found 8  indent
+   9:1   error  Expected indentation of 4 spaces but found 8  indent
+  10:1   error  Expected indentation of 4 spaces but found 8  indent
+  11:1   error  Expected indentation of 2 spaces but found 4  indent
+  12:3   error  Missing semicolon                             semi
+
+? 1558 problems (1558 errors, 0 warnings)
+  1419 errors and 0 warnings potentially fixable with the `--fix` option.
+
