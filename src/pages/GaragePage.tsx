@@ -4,11 +4,14 @@ import {
   Button,
   Chip,
   CircularProgress,
+  Dialog,
+  DialogContent,
   Pagination,
   Stack,
   TextField,
   Typography,
 } from '@mui/material';
+import { CarIcon } from '../components/CarIcon';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import {
   createCar,
@@ -94,6 +97,25 @@ const COLORS = [
 const GENERATE_COUNT = 100;
 const DEFAULT_COLOR = '#e74c3c';
 const RACE_LOCK_OPACITY = 0.3;
+const CREATED_CAR_ICON_SIZE = 72;
+
+const CREATED_CAR_PAPER_SX = {
+  background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+  border: '1px solid rgba(255,255,255,0.12)',
+  borderRadius: 4,
+  color: '#f8fafc',
+  minWidth: 300,
+  textAlign: 'center',
+  overflow: 'visible',
+} as const;
+
+const CREATED_CAR_BTN_SX = {
+  borderRadius: 999,
+  py: 1,
+  background: 'linear-gradient(90deg, #22d3ee 0%, #3b82f6 100%)',
+  boxShadow: '0 8px 20px rgba(34,211,238,0.25)',
+  '&:hover': { background: 'linear-gradient(90deg, #06b6d4 0%, #2563eb 100%)' },
+} as const;
 
 function randomCars(count: number) {
   return Array.from({ length: count }, () => ({
@@ -123,6 +145,46 @@ const INPUT_SX = {
   },
   '& .MuiInputBase-input::placeholder': { color: 'rgba(255,255,255,0.3)', opacity: 1 },
 };
+
+function useCreatedCar() {
+  const [createdCar, setCreatedCar] = useState<Car | null>(null);
+  return {
+    createdCar,
+    onCreated: (car: Car) => {
+      setCreatedCar(car);
+    },
+    clearCreatedCar: () => {
+      setCreatedCar(null);
+    },
+  };
+}
+
+interface CreatedCarModalProps {
+  open: boolean;
+  car: Car;
+  onClose: () => void;
+}
+
+function CreatedCarModal({ open, car, onClose }: CreatedCarModalProps) {
+  return (
+    <Dialog open={open} onClose={onClose} PaperProps={{ sx: CREATED_CAR_PAPER_SX }}>
+      <DialogContent sx={{ pt: 4, pb: 3, px: 4 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+          <CarIcon color={car.color} size={CREATED_CAR_ICON_SIZE} />
+        </Box>
+        <Typography variant="h6" fontWeight={700} sx={{ color: car.color }}>
+          {car.name}
+        </Typography>
+        <Typography variant="body2" sx={{ mt: 0.5, opacity: 0.5 }}>
+          Added to the garage!
+        </Typography>
+        <Button variant="contained" fullWidth onClick={onClose} sx={{ mt: 3, ...CREATED_CAR_BTN_SX }}>
+          {"Let's go!"}
+        </Button>
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 function ColorPicker({ color, onChange }: { color: string; onChange: (v: string) => void }) {
   return (
@@ -428,19 +490,34 @@ function useCarEditHandler(
   };
 }
 
+async function submitCreate(
+  dispatch: ReturnType<typeof useAppDispatch>,
+  name: string,
+  color: string,
+  onCreated: (car: Car) => void,
+  resetForm: () => void,
+) {
+  if (!name) return;
+  try {
+    const car = await dispatch(createCar({ name, color })).unwrap();
+    onCreated(car);
+  } catch {
+    // create failed — API unreachable or validation error
+  }
+  resetForm();
+}
+
 function useGarageFormCrud(
   dispatch: ReturnType<typeof useAppDispatch>,
   page: number,
   selectedCar: Car | null,
   state: GarageFormState,
+  onCreated: (car: Car) => void,
 ) {
   const { formName, formColor, resetForm } = state;
 
-  const handleCreate = () => {
-    const name = formName.trim();
-    if (!name) return;
-    void dispatch(createCar({ name, color: formColor }));
-    resetForm();
+  const handleCreate = async () => {
+    await submitCreate(dispatch, formName.trim(), formColor, onCreated, resetForm);
   };
 
   const handleUpdate = () => {
@@ -475,8 +552,9 @@ function useGarageFormCrud(
 function useGarageForm(dispatch: ReturnType<typeof useAppDispatch>) {
   const { cars, page, selectedCar } = useAppSelector((state) => state.garage);
   const state = useGarageFormState();
+  const { createdCar, onCreated, clearCreatedCar } = useCreatedCar();
   const handleEditCar = useCarEditHandler(dispatch, cars, selectedCar, state);
-  const crud = useGarageFormCrud(dispatch, page, selectedCar, state);
+  const crud = useGarageFormCrud(dispatch, page, selectedCar, state, onCreated);
 
   return {
     formName: state.formName,
@@ -485,6 +563,8 @@ function useGarageForm(dispatch: ReturnType<typeof useAppDispatch>) {
     setFormName: state.setFormName,
     setFormColor: state.setFormColor,
     handleEditCar,
+    createdCar,
+    clearCreatedCar,
     ...crud,
   };
 }
@@ -705,6 +785,9 @@ function GaragePage() {
           dispatch(clearWinner());
         }}
       />
+      {form.createdCar !== null && (
+        <CreatedCarModal open car={form.createdCar} onClose={form.clearCreatedCar} />
+      )}
     </Box>
   );
 }
