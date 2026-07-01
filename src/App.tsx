@@ -4,6 +4,7 @@ import { Box, Typography } from '@mui/material';
 import './App.css';
 import { routeConfig } from './routes/routeConfig';
 import { LoadingScreen } from './components/LoadingScreen';
+import { useAppSelector } from './store/hooks';
 
 const BOOT_DELAY_MS = 2000;
 
@@ -26,6 +27,7 @@ function BrandLetter({ char }: { char: string }) {
 function NavLinks() {
   const navigate = useNavigate();
   const location = useLocation();
+  const isRacing = useAppSelector((s) => s.race.isRacing);
 
   return (
     <nav className="nav-links" aria-label="Main navigation">
@@ -39,6 +41,7 @@ function NavLinks() {
             onClick={() => {
               void navigate(route.path);
             }}
+            disabled={isRacing}
             className={active ? 'nav-button active' : 'nav-button'}
             data-nav={route.key}
           >

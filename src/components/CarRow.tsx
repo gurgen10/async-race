@@ -61,6 +61,7 @@ interface CarRowButtonsProps {
   canStart: boolean;
   canReset: boolean;
   isSelected: boolean;
+  isRacing: boolean;
   onStart: () => void;
   onStop: () => void;
   onReset: () => void;
@@ -125,6 +126,7 @@ interface CarSecondaryButtonsProps {
   canReset: boolean;
   isSelected: boolean;
   isRunning: boolean;
+  isRacing: boolean;
   onReset: () => void;
   onEdit: () => void;
   onDeleteRequest: () => void;
@@ -155,11 +157,20 @@ function CarResetButton({ canReset, onReset }: { canReset: boolean; onReset: () 
   );
 }
 
-function CarEditButton({ isSelected, onEdit }: { isSelected: boolean; onEdit: () => void }) {
+function CarEditButton({
+  isSelected,
+  isRacing,
+  onEdit,
+}: {
+  isSelected: boolean;
+  isRacing: boolean;
+  onEdit: () => void;
+}) {
   return (
     <IconButton
       size="small"
       aria-label="Edit"
+      disabled={isRacing}
       onClick={onEdit}
       sx={{
         width: 28,
@@ -171,6 +182,7 @@ function CarEditButton({ isSelected, onEdit }: { isSelected: boolean; onEdit: ()
         color: isSelected ? '#f97316' : 'rgba(255,255,255,0.45)',
         transition: 'all 0.2s',
         '&:hover': { bgcolor: 'rgba(249,115,22,0.12)', borderColor: '#f97316', color: '#f97316' },
+        '&.Mui-disabled': { borderColor: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.2)' },
       }}
     >
       {isSelected ? '+' : '−'}
@@ -180,16 +192,19 @@ function CarEditButton({ isSelected, onEdit }: { isSelected: boolean; onEdit: ()
 
 function CarDeleteButton({
   isRunning,
+  isRacing,
   onDeleteRequest,
 }: {
   isRunning: boolean;
+  isRacing: boolean;
   onDeleteRequest: () => void;
 }) {
+  const locked = isRunning || isRacing;
   return (
     <IconButton
       size="small"
       aria-label="Delete"
-      disabled={isRunning}
+      disabled={locked}
       onClick={onDeleteRequest}
       sx={{
         width: 28,
@@ -197,8 +212,8 @@ function CarDeleteButton({
         fontSize: '0.75rem',
         border: '1.5px solid',
         borderRadius: '50%',
-        borderColor: isRunning ? 'rgba(255,255,255,0.1)' : 'rgba(248,113,113,0.45)',
-        color: isRunning ? 'rgba(255,255,255,0.2)' : '#f87171',
+        borderColor: locked ? 'rgba(255,255,255,0.1)' : 'rgba(248,113,113,0.45)',
+        color: locked ? 'rgba(255,255,255,0.2)' : '#f87171',
         transition: 'all 0.2s',
         '&:hover': { bgcolor: 'rgba(248,113,113,0.12)', borderColor: '#f87171' },
         '&.Mui-disabled': { borderColor: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.2)' },
@@ -213,6 +228,7 @@ function CarSecondaryButtons({
   canReset,
   isSelected,
   isRunning,
+  isRacing,
   onReset,
   onEdit,
   onDeleteRequest,
@@ -220,8 +236,8 @@ function CarSecondaryButtons({
   return (
     <>
       <CarResetButton canReset={canReset} onReset={onReset} />
-      <CarEditButton isSelected={isSelected} onEdit={onEdit} />
-      <CarDeleteButton isRunning={isRunning} onDeleteRequest={onDeleteRequest} />
+      <CarEditButton isSelected={isSelected} isRacing={isRacing} onEdit={onEdit} />
+      <CarDeleteButton isRunning={isRunning} isRacing={isRacing} onDeleteRequest={onDeleteRequest} />
     </>
   );
 }
@@ -231,6 +247,7 @@ function CarRowButtons({
   canStart,
   canReset,
   isSelected,
+  isRacing,
   onStart,
   onStop,
   onReset,
@@ -258,6 +275,7 @@ function CarRowButtons({
         canReset={canReset}
         isSelected={isSelected}
         isRunning={isRunning}
+        isRacing={isRacing}
         onReset={onReset}
         onEdit={onEdit}
         onDeleteRequest={onDeleteRequest}
@@ -792,6 +810,7 @@ export function CarRow({ car, onEdit }: CarRowProps) {
           canStart={view.canStart}
           canReset={view.canReset}
           isSelected={view.isSelected}
+          isRacing={view.isRacing}
           onStart={view.onStart}
           onStop={view.onStop}
           onReset={view.onReset}

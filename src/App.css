@@ -148,6 +148,17 @@
     0 0 28px #f472b666;
 }
 
+.nav-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.MuiButtonBase-root.Mui-disabled {
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}
+
 .page-card {
   padding: 28px;
   border: 1px solid rgba(255, 255, 255, 0.25);

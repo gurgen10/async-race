@@ -93,6 +93,7 @@ const COLORS = [
 ];
 const GENERATE_COUNT = 100;
 const DEFAULT_COLOR = '#e74c3c';
+const RACE_LOCK_OPACITY = 0.3;
 
 function randomCars(count: number) {
   return Array.from({ length: count }, () => ({
@@ -165,17 +166,25 @@ function ColorPicker({ color, onChange }: { color: string; onChange: (v: string)
 interface CreateUpdateButtonProps {
   isEditing: boolean;
   formName: string;
+  isRacing: boolean;
   onCreate: () => void;
   onUpdate: () => void;
 }
 
-function CreateUpdateButton({ isEditing, formName, onCreate, onUpdate }: CreateUpdateButtonProps) {
+function CreateUpdateButton({
+  isEditing,
+  formName,
+  isRacing,
+  onCreate,
+  onUpdate,
+}: CreateUpdateButtonProps) {
+  const isDisabled = !formName.trim() || isRacing;
   if (isEditing) {
     return (
       <Button
         variant="contained"
         onClick={onUpdate}
-        disabled={!formName.trim()}
+        disabled={isDisabled}
         sx={{
           borderRadius: 999,
           background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
@@ -192,7 +201,7 @@ function CreateUpdateButton({ isEditing, formName, onCreate, onUpdate }: CreateU
     <Button
       variant="contained"
       onClick={onCreate}
-      disabled={!formName.trim()}
+      disabled={isDisabled}
       sx={{
         borderRadius: 999,
         background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
@@ -238,6 +247,7 @@ interface GarageFormProps {
   formName: string;
   formColor: string;
   isEditing: boolean;
+  isRacing: boolean;
   onNameChange: (v: string) => void;
   onColorChange: (v: string) => void;
   onCreate: () => void;
@@ -249,6 +259,7 @@ function GarageForm({
   formName,
   formColor,
   isEditing,
+  isRacing,
   onNameChange,
   onColorChange,
   onCreate,
@@ -277,6 +288,7 @@ function GarageForm({
       <CreateUpdateButton
         isEditing={isEditing}
         formName={formName}
+        isRacing={isRacing}
         onCreate={onCreate}
         onUpdate={onUpdate}
       />
@@ -332,17 +344,19 @@ function ResetButton({ canReset, onReset }: { canReset: boolean; onReset: () => 
   );
 }
 
-function GenerateButton({ onGenerate }: { onGenerate: () => void }) {
+function GenerateButton({ disabled, onGenerate }: { disabled: boolean; onGenerate: () => void }) {
   return (
     <Button
       variant="outlined"
       onClick={onGenerate}
+      disabled={disabled}
       sx={{
         borderRadius: 999,
         borderColor: 'rgba(249,115,22,0.4)',
         color: '#f97316',
         fontSize: '0.75rem',
         '&:hover': { borderColor: '#f97316', bgcolor: 'rgba(249,115,22,0.08)' },
+        '&.Mui-disabled': { opacity: 0.4, borderColor: 'rgba(249,115,22,0.2)', color: '#f97316' },
       }}
     >
       Generate 100 Random Cars
@@ -353,18 +367,19 @@ function GenerateButton({ onGenerate }: { onGenerate: () => void }) {
 interface RaceControlsProps {
   canRace: boolean;
   canReset: boolean;
+  isRacing: boolean;
   onRace: () => void;
   onReset: () => void;
   onGenerate: () => void;
 }
 
-function RaceControls({ canRace, canReset, onRace, onReset, onGenerate }: RaceControlsProps) {
+function RaceControls({ canRace, canReset, isRacing, onRace, onReset, onGenerate }: RaceControlsProps) {
   return (
     <Stack direction="row" spacing={1.5} className="page-actions">
       <RaceButton canRace={canRace} onRace={onRace} />
       <ResetButton canReset={canReset} onReset={onReset} />
       <Box sx={{ flex: 1 }} />
-      <GenerateButton onGenerate={onGenerate} />
+      <GenerateButton disabled={isRacing} onGenerate={onGenerate} />
     </Stack>
   );
 }
@@ -576,24 +591,27 @@ function GarageStatusBody({ status, cars, onEdit }: GarageStatusBodyProps) {
 interface GaragePaginationProps {
   pageCount: number;
   page: number;
+  isRacing: boolean;
   onChange: (page: number) => void;
 }
 
-function GaragePagination({ pageCount, page, onChange }: GaragePaginationProps) {
+function GaragePagination({ pageCount, page, isRacing, onChange }: GaragePaginationProps) {
   if (pageCount <= 1) return null;
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-      <Pagination
-        count={pageCount}
-        page={page}
-        onChange={(_e, p) => {
-          onChange(p);
-        }}
-        sx={{
-          '& .MuiPaginationItem-root': { color: '#f8fafc' },
-          '& .Mui-selected': { background: 'rgba(249,115,22,0.3) !important' },
-        }}
-      />
+      <Box sx={{ opacity: isRacing ? RACE_LOCK_OPACITY : 1, pointerEvents: isRacing ? 'none' : 'auto' }}>
+        <Pagination
+          count={pageCount}
+          page={page}
+          onChange={(_e, p) => {
+            onChange(p);
+          }}
+          sx={{
+            '& .MuiPaginationItem-root': { color: '#f8fafc' },
+            '& .Mui-selected': { background: 'rgba(249,115,22,0.3) !important' },
+          }}
+        />
+      </Box>
     </Box>
   );
 }
@@ -622,15 +640,17 @@ interface GarageControlsSectionProps {
   form: ReturnType<typeof useGarageForm>;
   derived: ReturnType<typeof useGaragePageDerived>;
   dispatch: ReturnType<typeof useAppDispatch>;
+  isRacing: boolean;
 }
 
-function GarageControlsSection({ form, derived, dispatch }: GarageControlsSectionProps) {
+function GarageControlsSection({ form, derived, dispatch, isRacing }: GarageControlsSectionProps) {
   return (
     <>
       <GarageForm
         formName={form.formName}
         formColor={form.formColor}
         isEditing={!!form.selectedCar}
+        isRacing={isRacing}
         onNameChange={form.setFormName}
         onColorChange={form.setFormColor}
         onCreate={form.handleCreate}
@@ -640,6 +660,7 @@ function GarageControlsSection({ form, derived, dispatch }: GarageControlsSectio
       <RaceControls
         canRace={derived.canRace}
         canReset={derived.canReset}
+        isRacing={isRacing}
         onRace={() => {
           void dispatch(beginRace(derived.carIds));
         }}
@@ -666,11 +687,12 @@ function GaragePage() {
   return (
     <Box component="section" className="page-card garage-card">
       <GarageHeading status={status} total={total} />
-      <GarageControlsSection form={form} derived={derived} dispatch={dispatch} />
+      <GarageControlsSection form={form} derived={derived} dispatch={dispatch} isRacing={raceState.isRacing} />
       <GarageStatusBody status={status} cars={cars} onEdit={form.handleEditCar} />
       <GaragePagination
         pageCount={pageCount}
         page={page}
+        isRacing={raceState.isRacing}
         onChange={(p) => {
           dispatch(setPage(p));
         }}
