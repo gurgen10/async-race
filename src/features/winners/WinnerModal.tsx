@@ -1,5 +1,5 @@
 import { Box, Button, Dialog, DialogContent, Typography } from '@mui/material';
-import { CarIcon } from './CarIcon';
+import { CarIcon } from '../../shared/components/CarIcon';
 
 interface WinnerModalProps {
   open: boolean;

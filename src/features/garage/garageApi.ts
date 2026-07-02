@@ -1,5 +1,5 @@
-import { BASE_URL, fetchApi, fetchApiVoid } from './baseApi';
-import type { Car, CarCreate } from '../types/car';
+import { BASE_URL, fetchApi, fetchApiVoid } from '../../shared/api/baseApi';
+import type { Car, CarCreate } from '../../shared/types/car';
 
 const PATH = '/garage';
 

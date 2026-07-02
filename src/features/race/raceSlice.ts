@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
-import { engineApi } from '../../api/engineApi';
-import type { DriveStatus } from '../../types/engine';
+import { engineApi } from './engineApi';
+import type { DriveStatus } from '../../shared/types/engine';
 
 export interface CarRaceState {
   id: number;

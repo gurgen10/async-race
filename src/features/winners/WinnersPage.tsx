@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { Box, Chip, CircularProgress, Pagination, Stack, Typography } from '@mui/material';
-import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { fetchWinners, setPage, setSort, WINNERS_PAGE_SIZE } from '../store/slices/winnersSlice';
-import type { WinnerSortField, SortOrder } from '../api/winnersApi';
-import { CarIcon } from '../components/CarIcon';
-import type { WinnerWithCar } from '../types/winner';
+import { useAppDispatch, useAppSelector } from '../../shared/store/hooks';
+import { fetchWinners, setPage, setSort, WINNERS_PAGE_SIZE } from './winnersSlice';
+import type { WinnerSortField, SortOrder } from './winnersApi';
+import { CarIcon } from '../../shared/components/CarIcon';
+import type { WinnerWithCar } from '../../shared/types/winner';
 
 const TIME_DECIMAL_PLACES = 2;
 const CAR_ICON_SIZE = 52;

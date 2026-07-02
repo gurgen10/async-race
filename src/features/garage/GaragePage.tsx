@@ -11,8 +11,8 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { CarIcon } from '../components/CarIcon';
-import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { CarIcon } from '../../shared/components/CarIcon';
+import { useAppDispatch, useAppSelector } from '../../shared/store/hooks';
 import {
   createCar,
   fetchCars,
@@ -21,12 +21,12 @@ import {
   setPage,
   updateCar,
   GARAGE_PAGE_SIZE,
-} from '../store/slices/garageSlice';
-import { beginRace, clearWinner, resetAllCars, type RaceState } from '../store/slices/raceSlice';
-import { saveWinner } from '../store/slices/winnersSlice';
-import { CarRow } from '../components/CarRow';
-import { WinnerModal } from '../components/WinnerModal';
-import type { Car } from '../types/car';
+} from './garageSlice';
+import { beginRace, clearWinner, resetAllCars, type RaceState } from '../race/raceSlice';
+import { saveWinner } from '../winners/winnersSlice';
+import { CarRow } from './CarRow';
+import { WinnerModal } from '../winners/WinnerModal';
+import type { Car } from '../../shared/types/car';
 
 const BRANDS = [
   'Tesla',
@@ -179,7 +179,7 @@ function CreatedCarModal({ open, car, onClose }: CreatedCarModalProps) {
           Added to the garage!
         </Typography>
         <Button variant="contained" fullWidth onClick={onClose} sx={{ mt: 3, ...CREATED_CAR_BTN_SX }}>
-          {"Let's go!"}
+          Let&apos;s go!
         </Button>
       </DialogContent>
     </Dialog>
@@ -233,13 +233,7 @@ interface CreateUpdateButtonProps {
   onUpdate: () => void;
 }
 
-function CreateUpdateButton({
-  isEditing,
-  formName,
-  isRacing,
-  onCreate,
-  onUpdate,
-}: CreateUpdateButtonProps) {
+function CreateUpdateButton({ isEditing, formName, isRacing, onCreate, onUpdate }: CreateUpdateButtonProps) {
   const isDisabled = !formName.trim() || isRacing;
   if (isEditing) {
     return (
@@ -417,6 +411,7 @@ function GenerateButton({ disabled, onGenerate }: { disabled: boolean; onGenerat
         borderColor: 'rgba(249,115,22,0.4)',
         color: '#f97316',
         fontSize: '0.75rem',
+        marginLeft: '0 !important',
         '&:hover': { borderColor: '#f97316', bgcolor: 'rgba(249,115,22,0.08)' },
         '&.Mui-disabled': { opacity: 0.4, borderColor: 'rgba(249,115,22,0.2)', color: '#f97316' },
       }}

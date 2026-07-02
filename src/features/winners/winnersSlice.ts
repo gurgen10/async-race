@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
-import { winnersApi, type WinnerSortField, type SortOrder } from '../../api/winnersApi';
-import { garageApi } from '../../api/garageApi';
-import type { WinnerWithCar } from '../../types/winner';
-import type { RootState } from '../store';
+import { winnersApi, type WinnerSortField, type SortOrder } from './winnersApi';
+import { garageApi } from '../garage/garageApi';
+import type { WinnerWithCar } from '../../shared/types/winner';
+import type { RootState } from '../../shared/store/store';
 
 export const WINNERS_PAGE_SIZE = 10;
 

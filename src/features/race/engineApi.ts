@@ -1,5 +1,5 @@
-import { BASE_URL } from './baseApi';
-import type { EngineResponse, DriveStatus } from '../types/engine';
+import { BASE_URL } from '../../shared/api/baseApi';
+import type { EngineResponse, DriveStatus } from '../../shared/types/engine';
 
 const PATH = '/engine';
 

@@ -1,5 +1,5 @@
-import { BASE_URL, fetchApi, fetchApiVoid } from './baseApi';
-import type { Winner, WinnerCreate } from '../types/winner';
+import { BASE_URL, fetchApi, fetchApiVoid } from '../../shared/api/baseApi';
+import type { Winner, WinnerCreate } from '../../shared/types/winner';
 
 const PATH = '/winners';
 

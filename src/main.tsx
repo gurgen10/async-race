@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import { store } from './store/store';
+import { store } from './shared/store/store';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Root element #root not found in document');

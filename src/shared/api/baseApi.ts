@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../env';
+import { BASE_URL } from '../../../env';
 
 export { BASE_URL };
 

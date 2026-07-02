@@ -11,12 +11,12 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { clearCar, driveEngine, startEngine, stopEngine } from '../store/slices/raceSlice';
-import { deleteCar } from '../store/slices/garageSlice';
-import { deleteWinner } from '../store/slices/winnersSlice';
-import { CarIcon } from './CarIcon';
-import type { Car } from '../types/car';
+import { useAppDispatch, useAppSelector } from '../../shared/store/hooks';
+import { clearCar, driveEngine, startEngine, stopEngine } from '../race/raceSlice';
+import { deleteCar } from './garageSlice';
+import { deleteWinner } from '../winners/winnersSlice';
+import { CarIcon } from '../../shared/components/CarIcon';
+import type { Car } from '../../shared/types/car';
 
 const CAR_W = 56;
 const RETURN_TRANSITION_MS = 450;

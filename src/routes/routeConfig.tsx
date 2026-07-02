@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
-import GaragePage from '../pages/GaragePage';
-import WinnersPage from '../pages/WinnersPage';
+import GaragePage from '../features/garage/GaragePage';
+import WinnersPage from '../features/winners/WinnersPage';
 
 export type RouteKey = 'garage' | 'winners';
 

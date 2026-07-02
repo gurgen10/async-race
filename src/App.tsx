@@ -3,8 +3,8 @@ import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-
 import { Box, Typography } from '@mui/material';
 import './App.css';
 import { routeConfig } from './routes/routeConfig';
-import { LoadingScreen } from './components/LoadingScreen';
-import { useAppSelector } from './store/hooks';
+import { LoadingScreen } from './shared/components/LoadingScreen';
+import { useAppSelector } from './shared/store/hooks';
 
 const BOOT_DELAY_MS = 2000;
 

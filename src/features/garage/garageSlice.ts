@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
-import { garageApi } from '../../api/garageApi';
-import type { Car, CarCreate } from '../../types/car';
+import { garageApi } from './garageApi';
+import type { Car, CarCreate } from '../../shared/types/car';
 
 export const GARAGE_PAGE_SIZE = 7;
 
