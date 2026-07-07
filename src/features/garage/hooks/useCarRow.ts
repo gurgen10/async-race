@@ -61,23 +61,22 @@ function useCarResetEffect(
   resumeProgressRef: RefObject<number>,
 ) {
   useEffect(() => {
-    if (carRace) return;
-    drivenRef.current = false;
-    resumeProgressRef.current = 0;
-    if (rafRef.current !== null) {
-      cancelAnimationFrame(rafRef.current);
-      rafRef.current = null;
+    let timerId: ReturnType<typeof setTimeout> | undefined;
+    if (!carRace) {
+      drivenRef.current = false;
+      resumeProgressRef.current = 0;
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+      if (carRef.current) {
+        const el = carRef.current;
+        el.style.transition = 'transform 0.4s ease-in';
+        el.style.transform = 'translateX(0)';
+        timerId = setTimeout(() => { el.style.transition = ''; }, RETURN_TRANSITION_MS);
+      }
     }
-    if (carRef.current) {
-      const el = carRef.current;
-      el.style.transition = 'transform 0.4s ease-in';
-      el.style.transform = 'translateX(0)';
-      const timerId = setTimeout(() => {
-        el.style.transition = '';
-      }, RETURN_TRANSITION_MS);
-
-      return () => { clearTimeout(timerId); };
-    }
+    return () => { clearTimeout(timerId); };
   }, [carRace, carRef, rafRef, drivenRef, resumeProgressRef]);
 }
 
