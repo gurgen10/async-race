@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import {
   Box,
   Button,
@@ -13,151 +12,16 @@ import {
 } from '@mui/material';
 import { CarIcon } from '../../shared/components/CarIcon';
 import { useAppDispatch, useAppSelector } from '../../shared/store/hooks';
-import {
-  createCar,
-  fetchCars,
-  generateCars,
-  selectCar,
-  setPage,
-  updateCar,
-  GARAGE_PAGE_SIZE,
-} from './garageSlice';
-import { beginRace, clearWinner, resetAllCars, type RaceState } from '../race/raceSlice';
-import { saveWinner } from '../winners/winnersSlice';
+import { setPage, GARAGE_PAGE_SIZE } from './garageSlice';
+import { beginRace, clearWinner, resetAllCars } from '../race/raceSlice';
 import { CarRow } from './CarRow';
 import { WinnerModal } from '../winners/WinnerModal';
 import type { Car } from '../../shared/types/car';
-
-const BRANDS = [
-  'Tesla',
-  'Ford',
-  'BMW',
-  'Audi',
-  'Ferrari',
-  'Lamborghini',
-  'Porsche',
-  'Toyota',
-  'Honda',
-  'Chevrolet',
-  'Dodge',
-  'Bugatti',
-  'McLaren',
-  'Aston Martin',
-  'Jaguar',
-  'Maserati',
-  'Bentley',
-  'Rolls-Royce',
-  'Koenigsegg',
-  'Pagani',
-];
-const MODELS = [
-  'Model S',
-  'Mustang',
-  'M3',
-  'R8',
-  '488',
-  'Huracán',
-  '911',
-  'Supra',
-  'NSX',
-  'Corvette',
-  'Charger',
-  'Chiron',
-  '720S',
-  'DB11',
-  'F-Type',
-  'GranTurismo',
-  'Continental',
-  'Ghost',
-  'Jesko',
-  'Zonda',
-];
-const COLORS = [
-  '#e74c3c',
-  '#e67e22',
-  '#f1c40f',
-  '#2ecc71',
-  '#1abc9c',
-  '#3498db',
-  '#9b59b6',
-  '#e91e63',
-  '#ff5722',
-  '#00bcd4',
-  '#8bc34a',
-  '#ff9800',
-  '#673ab7',
-  '#f44336',
-  '#4caf50',
-  '#2196f3',
-  '#ff4081',
-  '#00e676',
-  '#ff6d00',
-  '#aa00ff',
-];
-const GENERATE_COUNT = 100;
-const DEFAULT_COLOR = '#e74c3c';
-const RACE_LOCK_OPACITY = 0.3;
-const CREATED_CAR_ICON_SIZE = 72;
-
-const CREATED_CAR_PAPER_SX = {
-  background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-  border: '1px solid rgba(255,255,255,0.12)',
-  borderRadius: 4,
-  color: '#f8fafc',
-  minWidth: 300,
-  textAlign: 'center',
-  overflow: 'visible',
-} as const;
-
-const CREATED_CAR_BTN_SX = {
-  borderRadius: 999,
-  py: 1,
-  background: 'linear-gradient(90deg, #22d3ee 0%, #3b82f6 100%)',
-  boxShadow: '0 8px 20px rgba(34,211,238,0.25)',
-  '&:hover': { background: 'linear-gradient(90deg, #06b6d4 0%, #2563eb 100%)' },
-} as const;
-
-function randomCars(count: number) {
-  return Array.from({ length: count }, () => ({
-    name: `${BRANDS[Math.floor(Math.random() * BRANDS.length)] ?? 'Generic'} ${MODELS[Math.floor(Math.random() * MODELS.length)] ?? 'Car'}`,
-    color: COLORS[Math.floor(Math.random() * COLORS.length)] ?? DEFAULT_COLOR,
-  }));
-}
-
-const FORM_BOX_SX = {
-  display: 'flex',
-  gap: 1.5,
-  alignItems: 'center',
-  mt: 2,
-  p: '10px 14px',
-  borderRadius: '10px',
-  background: 'rgba(255,255,255,0.05)',
-  border: '1px solid rgba(255,255,255,0.09)',
-  flexWrap: 'wrap',
-} as const;
-
-const INPUT_SX = {
-  '& .MuiOutlinedInput-root': {
-    color: '#f8fafc',
-    '& fieldset': { borderColor: 'rgba(255,255,255,0.15)' },
-    '&:hover fieldset': { borderColor: 'rgba(255,255,255,0.3)' },
-    '&.Mui-focused fieldset': { borderColor: '#f97316' },
-  },
-  '& .MuiInputBase-input::placeholder': { color: 'rgba(255,255,255,0.3)', opacity: 1 },
-};
-
-function useCreatedCar() {
-  const [createdCar, setCreatedCar] = useState<Car | null>(null);
-  return {
-    createdCar,
-    onCreated: (car: Car) => {
-      setCreatedCar(car);
-    },
-    clearCreatedCar: () => {
-      setCreatedCar(null);
-    },
-  };
-}
+import { MODAL_PAPER_SX, PAGINATION_SX } from '../../shared/styles';
+import { CREATED_CAR_ICON_SIZE, RACE_LOCK_OPACITY } from '../../shared/constants';
+import { CREATED_CAR_BTN_SX, FORM_BOX_SX, INPUT_SX } from './GaragePage.styles';
+import { useGarageForm } from './hooks/useGarageForm';
+import { useResetOnMount, useGaragePageEffects, useGaragePageDerived } from './hooks/useGaragePage';
 
 interface CreatedCarModalProps {
   open: boolean;
@@ -167,7 +31,7 @@ interface CreatedCarModalProps {
 
 function CreatedCarModal({ open, car, onClose }: CreatedCarModalProps) {
   return (
-    <Dialog open={open} onClose={onClose} PaperProps={{ sx: CREATED_CAR_PAPER_SX }}>
+    <Dialog open={open} onClose={onClose} PaperProps={{ sx: MODAL_PAPER_SX }}>
       <DialogContent sx={{ pt: 4, pb: 3, px: 4 }}>
         <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
           <CarIcon color={car.color} size={CREATED_CAR_ICON_SIZE} />
@@ -209,9 +73,7 @@ function ColorPicker({ color, onChange }: { color: string; onChange: (v: string)
         component="input"
         type="color"
         value={color}
-        onChange={(e) => {
-          onChange(e.target.value);
-        }}
+        onChange={(e) => { onChange(e.target.value); }}
         sx={{
           position: 'absolute',
           inset: 0,
@@ -288,10 +150,7 @@ function CancelButton({ formName, isEditing, onCancel }: CancelButtonProps) {
         borderColor: 'rgba(148,163,184,0.35)',
         color: '#64748b',
         '&:hover': { borderColor: '#94a3b8', bgcolor: 'rgba(148,163,184,0.08)', color: '#94a3b8' },
-        '&.Mui-disabled': {
-          borderColor: 'rgba(255,255,255,0.08)',
-          color: 'rgba(255,255,255,0.15)',
-        },
+        '&.Mui-disabled': { borderColor: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.15)' },
       }}
     >
       Cancel
@@ -325,13 +184,10 @@ function GarageForm({
   return (
     <Box sx={FORM_BOX_SX}>
       <ColorPicker color={formColor} onChange={onColorChange} />
-
       <TextField
         size="small"
         value={formName}
-        onChange={(e) => {
-          onNameChange(e.target.value);
-        }}
+        onChange={(e) => { onNameChange(e.target.value); }}
         placeholder="Car name"
         onKeyDown={(e) => {
           if (e.key !== 'Enter') return;
@@ -340,7 +196,6 @@ function GarageForm({
         }}
         sx={{ flex: 1, minWidth: 150, ...INPUT_SX }}
       />
-
       <CreateUpdateButton
         isEditing={isEditing}
         formName={formName}
@@ -353,19 +208,15 @@ function GarageForm({
   );
 }
 
-function RaceButton({ canRace, onRace }: { canRace: boolean; onRace: () => void }) {
+function RaceButton({ canRace, isRacing, onRace }: { canRace: boolean; isRacing: boolean; onRace: () => void }) {
   return (
     <Button
       variant="contained"
       color="secondary"
       className="action-secondary"
-      disabled={!canRace}
+      disabled={!canRace || isRacing}
       onClick={onRace}
-      startIcon={
-        <Box component="span" sx={{ fontSize: '0.7rem', lineHeight: 1 }}>
-          ▶
-        </Box>
-      }
+      startIcon={<Box component="span" sx={{ fontSize: '0.7rem', lineHeight: 1 }}>▶</Box>}
       sx={{ '&.Mui-disabled': { opacity: 0.4, color: 'white' } }}
     >
       Race
@@ -379,20 +230,13 @@ function ResetButton({ canReset, onReset }: { canReset: boolean; onReset: () => 
       variant="outlined"
       disabled={!canReset}
       onClick={onReset}
-      startIcon={
-        <Box component="span" sx={{ fontSize: '0.95rem', lineHeight: 1 }}>
-          ↺
-        </Box>
-      }
+      startIcon={<Box component="span" sx={{ fontSize: '0.95rem', lineHeight: 1 }}>↺</Box>}
       sx={{
         borderRadius: 999,
         borderColor: canReset ? 'rgba(148,163,184,0.5)' : 'rgba(255,255,255,0.12)',
         color: canReset ? '#94a3b8' : 'rgba(255,255,255,0.25)',
         '&:hover': { borderColor: '#94a3b8', bgcolor: 'rgba(148,163,184,0.1)' },
-        '&.Mui-disabled': {
-          borderColor: 'rgba(255,255,255,0.1)',
-          color: 'rgba(255,255,255,0.2)',
-        },
+        '&.Mui-disabled': { borderColor: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.2)' },
       }}
     >
       Reset
@@ -433,177 +277,12 @@ interface RaceControlsProps {
 function RaceControls({ canRace, canReset, isRacing, onRace, onReset, onGenerate }: RaceControlsProps) {
   return (
     <Stack direction="row" spacing={1.5} className="page-actions">
-      <RaceButton canRace={canRace} onRace={onRace} />
+      <RaceButton canRace={canRace} isRacing={isRacing} onRace={onRace} />
       <ResetButton canReset={canReset} onReset={onReset} />
       <Box sx={{ flex: 1 }} />
       <GenerateButton disabled={isRacing} onGenerate={onGenerate} />
     </Stack>
   );
-}
-
-interface GarageFormState {
-  formName: string;
-  formColor: string;
-  setFormName: (v: string) => void;
-  setFormColor: (v: string) => void;
-  resetForm: () => void;
-}
-
-function useGarageFormState(): GarageFormState {
-  const [formName, setFormName] = useState('');
-  const [formColor, setFormColor] = useState(DEFAULT_COLOR);
-  const resetForm = () => {
-    setFormName('');
-    setFormColor(DEFAULT_COLOR);
-  };
-  return {
-    formName,
-    formColor,
-    setFormName,
-    setFormColor,
-    resetForm,
-  };
-}
-
-function useCarEditHandler(
-  dispatch: ReturnType<typeof useAppDispatch>,
-  cars: Car[],
-  selectedCar: Car | null,
-  state: GarageFormState,
-) {
-  const { setFormName, setFormColor, resetForm } = state;
-
-  return (id: number, name: string, color: string) => {
-    if (selectedCar?.id === id) {
-      dispatch(selectCar(null));
-      resetForm();
-    } else {
-      dispatch(selectCar(cars.find((c) => c.id === id) ?? null));
-      setFormName(name);
-      setFormColor(color);
-    }
-  };
-}
-
-async function submitCreate(
-  dispatch: ReturnType<typeof useAppDispatch>,
-  name: string,
-  color: string,
-  onCreated: (car: Car) => void,
-  resetForm: () => void,
-) {
-  if (!name) return;
-  try {
-    const car = await dispatch(createCar({ name, color })).unwrap();
-    onCreated(car);
-  } catch {
-    // create failed — API unreachable or validation error
-  }
-  resetForm();
-}
-
-function useGarageFormCrud(
-  dispatch: ReturnType<typeof useAppDispatch>,
-  page: number,
-  selectedCar: Car | null,
-  state: GarageFormState,
-  onCreated: (car: Car) => void,
-) {
-  const { formName, formColor, resetForm } = state;
-
-  const handleCreate = async () => {
-    await submitCreate(dispatch, formName.trim(), formColor, onCreated, resetForm);
-  };
-
-  const handleUpdate = () => {
-    if (!selectedCar || !formName.trim()) return;
-    void dispatch(
-      updateCar({
-        id: selectedCar.id,
-        data: { name: formName.trim(), color: formColor },
-      }),
-    );
-    dispatch(selectCar(null));
-    resetForm();
-  };
-
-  const handleCancel = () => {
-    resetForm();
-    dispatch(selectCar(null));
-  };
-
-  const handleGenerateCars = () => {
-    void dispatch(generateCars(randomCars(GENERATE_COUNT))).then(() => dispatch(fetchCars(page)));
-  };
-
-  return {
-    handleCreate,
-    handleUpdate,
-    handleCancel,
-    handleGenerateCars,
-  };
-}
-
-function useGarageForm(dispatch: ReturnType<typeof useAppDispatch>) {
-  const { cars, page, selectedCar } = useAppSelector((state) => state.garage);
-  const state = useGarageFormState();
-  const { createdCar, onCreated, clearCreatedCar } = useCreatedCar();
-  const handleEditCar = useCarEditHandler(dispatch, cars, selectedCar, state);
-  const crud = useGarageFormCrud(dispatch, page, selectedCar, state, onCreated);
-
-  return {
-    formName: state.formName,
-    formColor: state.formColor,
-    selectedCar,
-    setFormName: state.setFormName,
-    setFormColor: state.setFormColor,
-    handleEditCar,
-    createdCar,
-    clearCreatedCar,
-    ...crud,
-  };
-}
-
-function useResetOnMount(dispatch: ReturnType<typeof useAppDispatch>) {
-  const raceCars = useAppSelector((state) => state.race.cars);
-  const mountIdsRef = useRef(Object.keys(raceCars).map(Number));
-
-  useEffect(() => {
-    const ids = mountIdsRef.current;
-    if (ids.length > 0) {
-      void dispatch(resetAllCars(ids));
-    }
-  }, [dispatch]);
-}
-
-function useGaragePageEffects(
-  dispatch: ReturnType<typeof useAppDispatch>,
-  page: number,
-  winnerId: number | null,
-  winnerTime: number | null,
-) {
-  useEffect(() => {
-    void dispatch(fetchCars(page));
-  }, [dispatch, page]);
-
-  useEffect(() => {
-    if (winnerId !== null && winnerTime !== null) {
-      void dispatch(saveWinner({ id: winnerId, time: winnerTime }));
-    }
-  }, [dispatch, winnerId, winnerTime]);
-}
-
-function useGaragePageDerived(cars: Car[], raceState: RaceState) {
-  const carIds = cars.map((c) => c.id);
-  const anyCarActive = Object.keys(raceState.cars).length > 0;
-  return {
-    carIds,
-    anyCarActive,
-    canRace: !anyCarActive && cars.length > 0,
-    canReset: anyCarActive,
-    winnerCar: cars.find((c) => c.id === raceState.winnerId) ?? null,
-    modalOpen: raceState.winnerId !== null && raceState.winnerTime !== null,
-  };
 }
 
 function GarageHeading({ status, total }: { status: string; total: number }) {
@@ -646,16 +325,7 @@ function GarageStatusBody({ status, cars, onEdit }: GarageStatusBodyProps) {
     return <Typography sx={{ mt: 2, opacity: 0.5 }}>No cars in the garage yet.</Typography>;
   }
   return (
-    <Box
-      component="ul"
-      className="list"
-      sx={{
-        listStyle: 'none',
-        p: 0,
-        m: 0,
-        mt: 2,
-      }}
-    >
+    <Box component="ul" className="list" sx={{ listStyle: 'none', p: 0, m: 0, mt: 2 }}>
       {cars.map((car) => (
         <CarRow key={car.id} car={car} onEdit={onEdit} />
       ))}
@@ -678,13 +348,8 @@ function GaragePagination({ pageCount, page, isRacing, onChange }: GaragePaginat
         <Pagination
           count={pageCount}
           page={page}
-          onChange={(_e, p) => {
-            onChange(p);
-          }}
-          sx={{
-            '& .MuiPaginationItem-root': { color: '#f8fafc' },
-            '& .Mui-selected': { background: 'rgba(249,115,22,0.3) !important' },
-          }}
+          onChange={(_e, p) => { onChange(p); }}
+          sx={PAGINATION_SX}
         />
       </Box>
     </Box>
@@ -714,11 +379,11 @@ function GarageWinnerSection({ winnerCar, winnerTime, open, onClose }: GarageWin
 interface GarageControlsSectionProps {
   form: ReturnType<typeof useGarageForm>;
   derived: ReturnType<typeof useGaragePageDerived>;
-  dispatch: ReturnType<typeof useAppDispatch>;
   isRacing: boolean;
 }
 
-function GarageControlsSection({ form, derived, dispatch, isRacing }: GarageControlsSectionProps) {
+function GarageControlsSection({ form, derived, isRacing }: GarageControlsSectionProps) {
+  const dispatch = useAppDispatch();
   return (
     <>
       <GarageForm
@@ -736,12 +401,8 @@ function GarageControlsSection({ form, derived, dispatch, isRacing }: GarageCont
         canRace={derived.canRace}
         canReset={derived.canReset}
         isRacing={isRacing}
-        onRace={() => {
-          void dispatch(beginRace(derived.carIds));
-        }}
-        onReset={() => {
-          void dispatch(resetAllCars(derived.carIds));
-        }}
+        onRace={() => { void dispatch(beginRace(derived.carIds)); }}
+        onReset={() => { void dispatch(resetAllCars(derived.carIds)); }}
         onGenerate={form.handleGenerateCars}
       />
     </>
@@ -762,23 +423,19 @@ function GaragePage() {
   return (
     <Box component="section" className="page-card garage-card">
       <GarageHeading status={status} total={total} />
-      <GarageControlsSection form={form} derived={derived} dispatch={dispatch} isRacing={raceState.isRacing} />
+      <GarageControlsSection form={form} derived={derived} isRacing={raceState.isRacing} />
       <GarageStatusBody status={status} cars={cars} onEdit={form.handleEditCar} />
       <GaragePagination
         pageCount={pageCount}
         page={page}
         isRacing={raceState.isRacing}
-        onChange={(p) => {
-          dispatch(setPage(p));
-        }}
+        onChange={(p) => { dispatch(setPage(p)); }}
       />
       <GarageWinnerSection
         winnerCar={derived.winnerCar}
         winnerTime={raceState.winnerTime}
         open={derived.modalOpen}
-        onClose={() => {
-          dispatch(clearWinner());
-        }}
+        onClose={() => { dispatch(clearWinner()); }}
       />
       {form.createdCar !== null && (
         <CreatedCarModal open car={form.createdCar} onClose={form.clearCreatedCar} />

@@ -61,15 +61,27 @@ export const saveWinner = createAsyncThunk(
         wins: existing.wins + 1,
         time: Math.min(existing.time, time),
       });
-    } catch {
-      return await winnersApi.createWinner({ id, wins: 1, time });
+    } catch (e) {
+      // Fix #4: only treat a genuine 404 as "no record yet"; re-throw everything else
+      // (network errors, 500s) so they surface as rejected thunks instead of creating
+      // a spurious duplicate winner row.
+      if (e instanceof Error && e.message.startsWith('HTTP 404')) {
+        return winnersApi.createWinner({ id, wins: 1, time });
+      }
+      throw e;
     }
   },
 );
 
 export const deleteWinner = createAsyncThunk('winners/deleteWinner', async (id: number) => {
-  await winnersApi.deleteWinner(id);
-  return id;
+  let wasDeleted = true;
+  try {
+    await winnersApi.deleteWinner(id);
+  } catch (e) {
+    if (!(e instanceof Error) || !e.message.startsWith('HTTP 404')) throw e;
+    wasDeleted = false; // car was never a winner — nothing was actually deleted
+  }
+  return { id, wasDeleted };
 });
 
 const winnersSlice = createSlice({
@@ -111,7 +123,8 @@ const winnersSlice = createSlice({
         }
       })
       .addCase(deleteWinner.fulfilled, (state, action) => {
-        state.winners = state.winners.filter((w) => w.id !== action.payload);
+        if (!action.payload.wasDeleted) return;
+        state.winners = state.winners.filter((w) => w.id !== action.payload.id);
         state.total -= 1;
       });
   },

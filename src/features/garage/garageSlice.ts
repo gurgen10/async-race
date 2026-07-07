@@ -68,7 +68,9 @@ const garageSlice = createSlice({
       })
       .addCase(createCar.fulfilled, (state, action) => {
         state.total += 1;
-        if (state.cars.length < GARAGE_PAGE_SIZE) {
+        // Only append to the current view if the new car logically belongs on this page
+        const newCarPage = Math.ceil(state.total / GARAGE_PAGE_SIZE);
+        if (state.page === newCarPage && state.cars.length < GARAGE_PAGE_SIZE) {
           state.cars.push(action.payload);
         }
       })
@@ -80,6 +82,9 @@ const garageSlice = createSlice({
       .addCase(deleteCar.fulfilled, (state, action) => {
         state.cars = state.cars.filter((c) => c.id !== action.payload);
         state.total -= 1;
+        // If the current page no longer exists after deletion, go back one page
+        const maxPage = Math.max(1, Math.ceil(state.total / GARAGE_PAGE_SIZE));
+        if (state.page > maxPage) state.page = maxPage;
       })
       .addCase(generateCars.fulfilled, (state, action) => {
         state.total += action.payload.length;

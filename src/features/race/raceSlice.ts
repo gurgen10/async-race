@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
 import { engineApi } from './engineApi';
 import type { DriveStatus } from '../../shared/types/engine';
+import type { RootState } from '../../shared/store/store';
 
 export interface CarRaceState {
   id: number;
@@ -13,6 +14,7 @@ export interface CarRaceState {
 
 export interface RaceState {
   isRacing: boolean;
+  raceSeq: number;
   raceStartedAt: number | null;
   winnerId: number | null;
   winnerTime: number | null;
@@ -24,16 +26,20 @@ const WINNER_TIME_DECIMALS = 2;
 
 const initialState: RaceState = {
   isRacing: false,
+  raceSeq: 0,
   raceStartedAt: null,
   winnerId: null,
   winnerTime: null,
   cars: {},
 };
 
-export const startEngine = createAsyncThunk('race/startEngine', async (id: number) => {
-  const { velocity, distance } = await engineApi.setEngine(id, 'started');
-  return { id, velocity, distance };
-});
+export const startEngine = createAsyncThunk(
+  'race/startEngine',
+  async ({ id, raceSeq }: { id: number; raceSeq?: number }) => {
+    const { velocity, distance } = await engineApi.setEngine(id, 'started');
+    return { id, velocity, distance, raceSeq };
+  },
+);
 
 export const stopEngine = createAsyncThunk('race/stopEngine', async (id: number) => {
   await engineApi.setEngine(id, 'stopped');
@@ -55,8 +61,9 @@ export const driveEngine = createAsyncThunk(
  */
 export const beginRace = createAsyncThunk(
   'race/beginRace',
-  async (carIds: number[], { dispatch }) => {
-    await Promise.all(carIds.map((id) => dispatch(startEngine(id))));
+  async (carIds: number[], { dispatch, getState }) => {
+    const { raceSeq } = (getState() as RootState).race;
+    await Promise.all(carIds.map((id) => dispatch(startEngine({ id, raceSeq }))));
     return performance.now();
   },
 );
@@ -95,7 +102,7 @@ const raceSlice = createSlice({
       state.winnerTime = null;
     },
     clearCar: (state, action: PayloadAction<number>) => {
-      Reflect.deleteProperty(state.cars, String(action.payload));
+      delete state.cars[action.payload]; // Fix #12: idiomatic Immer draft mutation
     },
     clearRace: (state) => {
       state.isRacing = false;
@@ -105,7 +112,9 @@ const raceSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(startEngine.fulfilled, (state, action) => {
-        const { id, velocity, distance } = action.payload;
+        const { id, velocity, distance, raceSeq } = action.payload;
+        // Discard stale race-start responses that arrived after a reset
+        if (raceSeq !== undefined && raceSeq !== state.raceSeq) return;
         state.cars[id] = {
           id,
           velocity,
@@ -129,10 +138,22 @@ const raceSlice = createSlice({
       })
       .addCase(beginRace.pending, (state) => {
         state.isRacing = true;
+        state.raceSeq += 1;
         clearRaceFields(state);
       })
       .addCase(beginRace.fulfilled, (state, action) => {
+        // Race may have been reset before all engines finished starting
+        if (!state.isRacing) return;
         state.raceStartedAt = action.payload;
+      })
+      .addCase(resetAllCars.pending, (state) => {
+        // Immediately invalidate any in-flight startEngine responses from the current race
+        state.raceSeq += 1;
+      })
+      // Fix #3: reset isRacing so controls are never permanently locked after a network failure
+      .addCase(beginRace.rejected, (state) => {
+        state.isRacing = false;
+        clearRaceFields(state);
       })
       .addCase(resetAllCars.fulfilled, (state) => {
         state.isRacing = false;

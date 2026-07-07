@@ -1,5 +1,7 @@
 import { Box, Button, Dialog, DialogContent, Typography } from '@mui/material';
 import { CarIcon } from '../../shared/components/CarIcon';
+import { MODAL_PAPER_SX } from '../../shared/styles';
+import { AWESOME_BTN_SX } from './WinnerModal.styles';
 
 interface WinnerModalProps {
   open: boolean;
@@ -8,24 +10,6 @@ interface WinnerModalProps {
   winnerTime: number;
   onClose: () => void;
 }
-
-const WINNER_MODAL_PAPER_SX = {
-  background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-  border: '1px solid rgba(255,255,255,0.12)',
-  borderRadius: 4,
-  color: '#f8fafc',
-  minWidth: 300,
-  textAlign: 'center',
-  overflow: 'visible',
-} as const;
-
-const AWESOME_BTN_SX = {
-  borderRadius: 999,
-  py: 1,
-  background: 'linear-gradient(90deg, #f97316 0%, #ef4444 100%)',
-  boxShadow: '0 8px 20px rgba(249,115,22,0.3)',
-  '&:hover': { background: 'linear-gradient(90deg, #ea6f10 0%, #dc2626 100%)' },
-} as const;
 
 interface WinnerStatsProps {
   winnerName: string;
@@ -75,7 +59,7 @@ export function WinnerModal({
   onClose,
 }: WinnerModalProps) {
   return (
-    <Dialog open={open} onClose={onClose} PaperProps={{ sx: WINNER_MODAL_PAPER_SX }}>
+    <Dialog open={open} onClose={onClose} PaperProps={{ sx: MODAL_PAPER_SX }}>
       <DialogContent sx={{ pt: 4, pb: 3, px: 4 }}>
         <WinnerStats winnerName={winnerName} winnerColor={winnerColor} winnerTime={winnerTime} />
         <Button variant="contained" fullWidth onClick={onClose} sx={AWESOME_BTN_SX}>

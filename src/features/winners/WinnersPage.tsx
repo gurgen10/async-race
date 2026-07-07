@@ -5,68 +5,11 @@ import { fetchWinners, setPage, setSort, WINNERS_PAGE_SIZE } from './winnersSlic
 import type { WinnerSortField, SortOrder } from './winnersApi';
 import { CarIcon } from '../../shared/components/CarIcon';
 import type { WinnerWithCar } from '../../shared/types/winner';
+import { PAGINATION_SX } from '../../shared/styles';
+import { CAR_ICON_SIZE, GRID, HEADER_LABELS, SORTABLE, TIME_DECIMAL_PLACES } from '../../shared/constants';
+import { HEADER_BOX_SX, HEADER_LABEL_SX, TIME_SX, WINS_CHIP_SX } from './WinnersPage.styles';
 
-const TIME_DECIMAL_PLACES = 2;
-const CAR_ICON_SIZE = 52;
-
-const COL = {
-  rank: '36px',
-  car: '64px',
-  name: '1fr',
-  wins: '56px',
-  time: '72px',
-};
-
-const GRID = `${COL.rank} ${COL.car} ${COL.name} ${COL.wins} ${COL.time}`;
-
-const HEADER_LABELS = ['№', 'Car', 'Name', 'Wins', 'Best time'] as const;
 type HeaderLabel = (typeof HEADER_LABELS)[number];
-
-const SORTABLE: Record<string, WinnerSortField | undefined> = {
-  '№': 'id',
-  Wins: 'wins',
-  'Best time': 'time',
-};
-
-const HEADER_BOX_SX = {
-  display: 'grid',
-  gridTemplateColumns: GRID,
-  alignItems: 'center',
-  gap: 1,
-  mt: 2,
-  px: '12px',
-  pb: 1,
-  borderBottom: '1px solid rgba(255,255,255,0.08)',
-} as const;
-
-const HEADER_LABEL_SX = {
-  opacity: 0.4,
-  textTransform: 'uppercase',
-  letterSpacing: '0.1em',
-  fontSize: '0.65rem',
-} as const;
-
-const WINS_CHIP_SX = {
-  height: 20,
-  fontSize: '0.7rem',
-  fontWeight: 700,
-  bgcolor: 'rgba(249,115,22,0.18)',
-  color: '#f97316',
-  border: '1px solid rgba(249,115,22,0.35)',
-  '& .MuiChip-label': { px: 1 },
-} as const;
-
-const TIME_SX = {
-  textAlign: 'right',
-  color: '#34d399',
-  fontWeight: 600,
-  fontVariantNumeric: 'tabular-nums',
-} as const;
-
-const PAGINATION_SX = {
-  '& .MuiPaginationItem-root': { color: '#f8fafc' },
-  '& .Mui-selected': { background: 'rgba(249,115,22,0.3) !important' },
-} as const;
 
 function WinsChip({ wins }: { wins: number }) {
   return (
@@ -84,12 +27,13 @@ function TimeStat({ time }: { time: number }) {
   );
 }
 
-function WinnerRow({ winner }: { winner: WinnerWithCar }) {
+// Fix #7: accept rank (1-based visual position) instead of relying on winner.id
+function WinnerRow({ winner, rank }: { winner: WinnerWithCar; rank: number }) {
   return (
     <Box component="li" className="list-item">
       <Box sx={{ display: 'grid', gridTemplateColumns: GRID, alignItems: 'center', gap: 1 }}>
         <Typography variant="body2" fontWeight={700} sx={{ textAlign: 'right' }}>
-          {winner.id}
+          {rank}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <CarIcon color={winner.color} size={CAR_ICON_SIZE} />
@@ -155,16 +99,17 @@ interface WinnersTableProps {
   winners: WinnerWithCar[];
   sort: WinnerSortField;
   order: SortOrder;
+  page: number;
   onSort: (field: WinnerSortField) => void;
 }
 
-function WinnersTable({ winners, sort, order, onSort }: WinnersTableProps) {
+function WinnersTable({ winners, sort, order, page, onSort }: WinnersTableProps) {
   return (
     <>
       <WinnersTableHeader sort={sort} order={order} onSort={onSort} />
       <Box component="ul" className="list" sx={{ listStyle: 'none', p: 0, m: 0, mt: 1 }}>
-        {winners.map((winner) => (
-          <WinnerRow key={winner.id} winner={winner} />
+        {winners.map((winner, index) => (
+          <WinnerRow key={winner.id} winner={winner} rank={(page - 1) * WINNERS_PAGE_SIZE + index + 1} />
         ))}
       </Box>
     </>
@@ -176,10 +121,11 @@ interface WinnersStatusBodyProps {
   winners: WinnerWithCar[];
   sort: WinnerSortField;
   order: SortOrder;
+  page: number;
   onSort: (field: WinnerSortField) => void;
 }
 
-function WinnersStatusBody({ status, winners, sort, order, onSort }: WinnersStatusBodyProps) {
+function WinnersStatusBody({ status, winners, sort, order, page, onSort }: WinnersStatusBodyProps) {
   if (status === 'loading') {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
@@ -199,7 +145,7 @@ function WinnersStatusBody({ status, winners, sort, order, onSort }: WinnersStat
       <Typography sx={{ mt: 2, opacity: 0.5 }}>No winners yet — race some cars first!</Typography>
     );
   }
-  return <WinnersTable winners={winners} sort={sort} order={order} onSort={onSort} />;
+  return <WinnersTable winners={winners} sort={sort} order={order} page={page} onSort={onSort} />;
 }
 
 interface WinnersHeadingProps {
@@ -265,6 +211,7 @@ function WinnersPage() {
         winners={winners}
         sort={sort}
         order={order}
+        page={page}
         onSort={onSort}
       />
 
