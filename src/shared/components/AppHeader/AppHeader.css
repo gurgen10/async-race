@@ -1,0 +1,134 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.brand-frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 32px;
+  border: 2px solid #22d3ee;
+  border-radius: 16px;
+  position: relative;
+  box-shadow:
+    0 0 10px #22d3ee,
+    0 0 28px #22d3ee55,
+    inset 0 0 12px #22d3ee18;
+}
+
+.brand-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.brand-word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-letter {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f0abfc;
+  transition: transform 0.2s ease;
+  margin: 0 0.04em;
+  animation: letter-pulse 1.4s ease-in-out infinite;
+}
+
+.brand-lights {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.2em;
+}
+
+.brand-light {
+  width: 0.28em;
+  height: 0.28em;
+  border-radius: 999px;
+  opacity: 0;
+  box-shadow: 0 0 6px currentColor;
+  animation: blink-light 1.2s infinite;
+}
+
+.brand-light-red {
+  background: #ff3b30;
+  color: #ff3b30;
+  animation-delay: 0s;
+}
+
+.brand-light-blue {
+  background: #2196f3;
+  color: #2196f3;
+  animation-delay: 0.2s;
+}
+
+.brand-light-orange {
+  background: #ff9800;
+  color: #ff9800;
+  animation-delay: 0.4s;
+}
+
+.brand-text {
+  display: inline-block;
+  line-height: 1;
+  text-shadow: 0 0 0 transparent;
+}
+
+@keyframes blink-light {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes letter-pulse {
+  0%,
+  100% {
+    color: #f0abfc;
+    text-shadow: 0 0 6px #f0abfc88;
+    transform: scale(1);
+  }
+
+  50% {
+    color: #e879f9;
+    text-shadow:
+      0 0 12px #e879f9,
+      0 0 28px #e879f966;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 700px) {
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brand-frame {
+    align-self: center;
+  }
+}

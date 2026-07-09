@@ -1,0 +1,30 @@
+.sort-col-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-self: end;
+  opacity: 0.45;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.65rem;
+  font-family: inherit;
+  color: #f8fafc;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.sort-col-btn:hover {
+  opacity: 0.85;
+}
+
+.sort-col-btn.active {
+  opacity: 1;
+  color: #34d399;
+}
+
+.sort-icon-idle {
+  opacity: 0.35;
+}

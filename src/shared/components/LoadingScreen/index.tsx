@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import './LoadingScreen.css';
 
 const STRIPS = 5;
 const STRIP_W = 18; // px — 2 × 9 px squares per strip column

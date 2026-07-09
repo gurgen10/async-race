@@ -1,3 +1,5 @@
+export const BOOT_DELAY_MS = 2000;
+
 // ── Garage — car generator ────────────────────────────────────────────────
 
 export const BRANDS: string[] = [

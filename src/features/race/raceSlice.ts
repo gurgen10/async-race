@@ -90,6 +90,34 @@ function recordWinner(state: RaceState, id: number) {
   state.isRacing = false;
 }
 
+function applyStartEngineFulfilled(state: RaceState, action: ReturnType<typeof startEngine.fulfilled>) {
+  const { id, velocity, distance, raceSeq } = action.payload;
+  // Discard stale race-start responses that arrived after a reset
+  if (raceSeq !== undefined && raceSeq !== state.raceSeq) return;
+  state.cars[id] = {
+    id,
+    velocity,
+    distance,
+    duration: Math.round(distance / velocity),
+    status: 'started',
+  };
+}
+
+function applyDriveEngineFulfilled(state: RaceState, action: ReturnType<typeof driveEngine.fulfilled>) {
+  const { id, driveStatus } = action.payload;
+  if (state.cars[id]) {
+    state.cars[id].status = driveStatus === 'success' ? 'driving' : 'broken';
+  }
+  if (state.isRacing && driveStatus === 'success' && state.winnerId === null) {
+    recordWinner(state, id);
+  }
+}
+
+function applyStopEngineFulfilled(state: RaceState, action: ReturnType<typeof stopEngine.fulfilled>) {
+  const id = action.payload;
+  if (state.cars[id]) state.cars[id].status = 'stopped';
+}
+
 const raceSlice = createSlice({
   name: 'race',
   initialState,
@@ -102,7 +130,7 @@ const raceSlice = createSlice({
       state.winnerTime = null;
     },
     clearCar: (state, action: PayloadAction<number>) => {
-      delete state.cars[action.payload]; // Fix #12: idiomatic Immer draft mutation
+      Reflect.deleteProperty(state.cars, action.payload); // Fix #12: idiomatic Immer draft mutation
     },
     clearRace: (state) => {
       state.isRacing = false;
@@ -111,46 +139,21 @@ const raceSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(startEngine.fulfilled, (state, action) => {
-        const { id, velocity, distance, raceSeq } = action.payload;
-        // Discard stale race-start responses that arrived after a reset
-        if (raceSeq !== undefined && raceSeq !== state.raceSeq) return;
-        state.cars[id] = {
-          id,
-          velocity,
-          distance,
-          duration: Math.round(distance / velocity),
-          status: 'started',
-        };
-      })
-      .addCase(driveEngine.fulfilled, (state, action) => {
-        const { id, driveStatus } = action.payload;
-        if (state.cars[id]) {
-          state.cars[id].status = driveStatus === 'success' ? 'driving' : 'broken';
-        }
-        if (state.isRacing && driveStatus === 'success' && state.winnerId === null) {
-          recordWinner(state, id);
-        }
-      })
-      .addCase(stopEngine.fulfilled, (state, action) => {
-        const id = action.payload;
-        if (state.cars[id]) state.cars[id].status = 'stopped';
-      })
+      .addCase(startEngine.fulfilled, applyStartEngineFulfilled)
+      .addCase(driveEngine.fulfilled, applyDriveEngineFulfilled)
+      .addCase(stopEngine.fulfilled, applyStopEngineFulfilled)
       .addCase(beginRace.pending, (state) => {
         state.isRacing = true;
         state.raceSeq += 1;
         clearRaceFields(state);
       })
       .addCase(beginRace.fulfilled, (state, action) => {
-        // Race may have been reset before all engines finished starting
         if (!state.isRacing) return;
         state.raceStartedAt = action.payload;
       })
       .addCase(resetAllCars.pending, (state) => {
-        // Immediately invalidate any in-flight startEngine responses from the current race
         state.raceSeq += 1;
       })
-      // Fix #3: reset isRacing so controls are never permanently locked after a network failure
       .addCase(beginRace.rejected, (state) => {
         state.isRacing = false;
         clearRaceFields(state);

@@ -1,0 +1,64 @@
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-button {
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 10px 28px;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.nav-button[data-nav='garage'] {
+  color: #22d3ee;
+  border-color: #22d3ee;
+  text-shadow: 0 0 8px #22d3ee;
+  box-shadow: 0 0 6px #22d3ee88;
+}
+
+.nav-button[data-nav='garage']:hover,
+.nav-button[data-nav='garage'].active {
+  background: #22d3ee18;
+  box-shadow:
+    0 0 12px #22d3ee,
+    0 0 28px #22d3ee66;
+}
+
+.nav-button[data-nav='winners'] {
+  color: #f472b6;
+  border-color: #f472b6;
+  text-shadow: 0 0 8px #f472b6;
+  box-shadow: 0 0 6px #f472b688;
+}
+
+.nav-button[data-nav='winners']:hover,
+.nav-button[data-nav='winners'].active {
+  background: #f472b618;
+  box-shadow:
+    0 0 12px #f472b6,
+    0 0 28px #f472b666;
+}
+
+.nav-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-button {
+    flex: 1;
+  }
+}

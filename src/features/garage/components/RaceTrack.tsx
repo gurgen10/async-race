@@ -1,5 +1,6 @@
 import type { RefObject } from 'react';
 import { Box, Typography } from '@mui/material';
+import './RaceTrack.css';
 import { CarIcon } from '../../../shared/components/CarIcon';
 import type { Car } from '../../../shared/types/car';
 import { CAR_W, CE_PATHS, LANE_DASH_OFFSET, START_LINE_W } from '../../../shared/constants';

@@ -7,7 +7,7 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import { CANCEL_BTN_SX, DELETE_BTN_SX, DELETE_DIALOG_PAPER_SX } from '../styles';
+import { CANCEL_BTN_SX, DELETE_BTN_SX, DELETE_DIALOG_PAPER_SX } from '../../styles';
 
 export interface DeleteDialogProps {
   open: boolean;

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Box, Chip, CircularProgress, Pagination, Stack, Typography } from '@mui/material';
+import './WinnersPage.css';
 import { useAppDispatch, useAppSelector } from '../../shared/store/hooks';
 import { fetchWinners, setPage, setSort, WINNERS_PAGE_SIZE } from './winnersSlice';
 import type { WinnerSortField, SortOrder } from './winnersApi';

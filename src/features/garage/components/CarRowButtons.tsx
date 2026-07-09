@@ -162,10 +162,7 @@ function CarSecondaryButtons({
   );
 }
 
-export function CarRowButtons({
-  isRunning,
-  canStart,
-  canReset,
+export function CarRowButtons({ isRunning, canStart, canReset,
   isSelected,
   isRacing,
   onStart,

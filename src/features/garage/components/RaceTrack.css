@@ -1,0 +1,25 @@
+/* Check-engine indicator — slow amber blink when an engine breaks */
+@keyframes check-engine-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Finish-line golden pulse when a car crosses the line */
+@keyframes finish-glow {
+  0%,
+  100% {
+    filter: brightness(1.2);
+    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.35);
+  }
+
+  50% {
+    filter: brightness(1.85);
+    box-shadow: inset 0 0 24px rgba(255, 215, 0, 0.82);
+  }
+}

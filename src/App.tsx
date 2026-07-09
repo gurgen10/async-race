@@ -1,79 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Box, Typography } from '@mui/material';
-import './App.css';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { Box } from '@mui/material';
 import { routeConfig } from './routes/routeConfig';
+import { AppHeader } from './shared/components/AppHeader';
 import { LoadingScreen } from './shared/components/LoadingScreen';
-import { useAppSelector } from './shared/store/hooks';
-
-const BOOT_DELAY_MS = 2000;
-
-const BRAND_LINE_1 = ['A', 's', 'y', 'n', 'c'];
-const BRAND_LINE_2 = ['R', 'a', 'c', 'e'];
-
-function BrandLetter({ char }: { char: string }) {
-  return (
-    <span className="brand-letter">
-      <span className="brand-lights" aria-hidden="true">
-        <span className="brand-light brand-light-red" />
-        <span className="brand-light brand-light-blue" />
-        <span className="brand-light brand-light-orange" />
-      </span>
-      <span className="brand-text">{char}</span>
-    </span>
-  );
-}
-
-function NavLinks() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const isRacing = useAppSelector((s) => s.race.isRacing);
-
-  return (
-    <nav className="nav-links" aria-label="Main navigation">
-      {routeConfig.map((route) => {
-        const active =
-          location.pathname === route.path || (location.pathname === '/' && route.key === 'garage');
-        return (
-          <button
-            type="button"
-            key={route.key}
-            onClick={() => {
-              void navigate(route.path);
-            }}
-            disabled={isRacing}
-            className={active ? 'nav-button active' : 'nav-button'}
-            data-nav={route.key}
-          >
-            {route.label}
-          </button>
-        );
-      })}
-    </nav>
-  );
-}
-
-function AppHeader() {
-  return (
-    <Box component="header" className="app-header">
-      <Box className="brand-frame" role="img" aria-label="Async Race logo">
-        <Typography component="h1" className="brand-title">
-          <span className="brand-word">
-            {BRAND_LINE_1.map((char) => (
-              <BrandLetter key={char} char={char} />
-            ))}
-          </span>
-          <span className="brand-word">
-            {BRAND_LINE_2.map((char) => (
-              <BrandLetter key={char} char={char} />
-            ))}
-          </span>
-        </Typography>
-      </Box>
-      <NavLinks />
-    </Box>
-  );
-}
+import { BOOT_DELAY_MS } from './shared/constants';
+import './App.css';
 
 function App() {
   const [isBooting, setIsBooting] = useState(true);
